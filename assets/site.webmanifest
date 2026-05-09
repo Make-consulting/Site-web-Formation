@@ -1,0 +1,11 @@
+{
+  "name": "Formation Incendie Paris – make",
+  "short_name": "make",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "favicon-128.png", "sizes": "128x128", "type": "image/png" }
+  ],
+  "theme_color": "#2B3A6B",
+  "background_color": "#ffffff",
+  "display": "browser"
+}
