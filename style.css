@@ -1,0 +1,311 @@
+/* ══════════════════════════════════════════════
+   MAKE – Formation Incendie Paris
+   Design System – inspiré du logo (marine + bordeaux)
+══════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --marine:      #2B3A6B;
+  --marine-fonce:#1A2548;
+  --marine-clair:#3D5099;
+  --bordeaux:    #8B1A1A;
+  --bordeaux-vif:#A52020;
+  --bordeaux-pale:#F5E8E8;
+  --or:          #C9A84C;
+  --or-pale:     #F7F0DC;
+  --blanc:       #FFFFFF;
+  --creme:       #F9F7F4;
+  --gris-chaud:  #3A3530;
+  --gris-mid:    #6A635C;
+  --gris-clair:  #F0EDE8;
+  --texte:       #1E1A16;
+
+  --font-titre: 'Cormorant Garamond', Georgia, serif;
+  --font-corps: 'Jost', 'Helvetica Neue', sans-serif;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-corps);
+  font-weight: 300;
+  color: var(--texte);
+  background: var(--blanc);
+  line-height: 1.7;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--marine-fonce);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 68px;
+  border-bottom: 2px solid var(--bordeaux);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 50px;
+  width: auto;
+  background: var(--blanc);
+  border-radius: 4px;
+  padding: 3px 6px;
+  display: block;
+}
+
+.nav-logo-text {
+  font-family: var(--font-titre);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.nav-logo-text strong {
+  display: block;
+  color: var(--blanc);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-corps);
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0.5rem 0.85rem;
+  border-radius: 2px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--blanc); background: rgba(255,255,255,0.08); }
+
+.nav-links .nav-app {
+  background: var(--bordeaux);
+  color: var(--blanc) !important;
+  border-radius: 2px;
+  padding: 0.5rem 1rem !important;
+}
+.nav-links .nav-app:hover { background: var(--bordeaux-vif) !important; }
+
+.nav-links .nav-contact {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--blanc) !important;
+  border-radius: 2px;
+}
+.nav-links .nav-contact:hover { background: rgba(255,255,255,0.1) !important; border-color: rgba(255,255,255,0.6); }
+
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.burger span { display: block; width: 22px; height: 2px; background: var(--blanc); transition: all 0.3s; }
+
+/* ── UTILITAIRES ── */
+.section-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.tag-bordeaux { color: var(--bordeaux); }
+.tag-or { color: var(--or); }
+.tag-blanc { color: rgba(255,255,255,0.55); }
+
+h1, h2, h3 { font-family: var(--font-titre); font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
+h3 { font-size: 1.3rem; font-weight: 600; }
+
+.section-inner { max-width: 1140px; margin: 0 auto; }
+
+section { padding: 5.5rem 2rem; }
+
+.btn-marine {
+  display: inline-block;
+  background: var(--marine);
+  color: var(--blanc);
+  padding: 0.85rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+  font-family: var(--font-corps);
+}
+.btn-marine:hover { background: var(--marine-clair); transform: translateY(-1px); }
+
+.btn-bordeaux {
+  display: inline-block;
+  background: var(--bordeaux);
+  color: var(--blanc);
+  padding: 0.85rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+  font-family: var(--font-corps);
+}
+.btn-bordeaux:hover { background: var(--bordeaux-vif); transform: translateY(-1px); }
+
+.btn-outline-blanc {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.9);
+  padding: 0.85rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 2px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline-blanc:hover { border-color: rgba(255,255,255,0.9); color: var(--blanc); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--marine-fonce);
+  border-top: 2px solid var(--bordeaux);
+  padding: 3rem 2rem 2rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo img {
+  height: 60px;
+  background: var(--blanc);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.footer-logo p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.4);
+  max-width: 260px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-corps);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col ul li a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: rgba(255,255,255,0.9); }
+
+.footer-bottom {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-bottom a:hover { color: rgba(255,255,255,0.8); }
+
+/* ── CARDS COMMUNES ── */
+.card {
+  background: var(--blanc);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 3px;
+  padding: 2rem;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+.card:hover { box-shadow: 0 8px 32px rgba(43,58,107,0.1); transform: translateY(-2px); }
+
+.card-accent-top { border-top: 3px solid var(--bordeaux); }
+.card-accent-top-marine { border-top: 3px solid var(--marine); }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+}
+.badge-bordeaux { background: var(--bordeaux-pale); color: var(--bordeaux); }
+.badge-marine { background: rgba(43,58,107,0.08); color: var(--marine); }
+.badge-or { background: var(--or-pale); color: #7A5C10; }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: var(--marine-fonce);
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--bordeaux);
+    gap: 0.5rem;
+    z-index: 199;
+  }
+  .nav-links.open a { font-size: 1rem; padding: 0.75rem 1rem; }
+  .burger { display: flex; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}

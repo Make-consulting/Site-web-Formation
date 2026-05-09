@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | make – M. SOILEUX Maxence – Formateur IPRP Paris</title>
+  <meta name="description" content="Contactez M. SOILEUX Maxence pour une formation incendie, SST, un audit QSE, un DUERP ou une démo de l'application FireTraining MS. Paris & Île-de-France." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-page { padding:8rem 2rem 5rem; background:var(--marine-fonce); min-height:100vh; }
+    .contact-layout {
+      max-width:1140px; margin:0 auto;
+      display:grid; grid-template-columns:1fr 1.5fr;
+      gap:5rem; align-items:start;
+    }
+
+    .contact-sidebar h1 { color:var(--blanc); font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:0.5rem; }
+    .contact-sidebar .sub { font-family:var(--font-titre); font-style:italic; color:rgba(255,255,255,0.4); font-size:1.1rem; margin-bottom:2rem; }
+
+    .contact-detail {
+      display:flex; gap:1rem; align-items:flex-start;
+      margin-bottom:1.5rem;
+    }
+    .contact-detail-icon {
+      width:44px; height:44px;
+      background:rgba(139,26,26,0.2);
+      border:1px solid rgba(139,26,26,0.35);
+      border-radius:3px;
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; flex-shrink:0;
+    }
+    .contact-detail-label { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:0.2rem; font-weight:400; }
+    .contact-detail-val { font-size:0.95rem; color:rgba(255,255,255,0.8); }
+    .contact-detail-val a { color:rgba(255,255,255,0.8); text-decoration:none; transition:color 0.2s; }
+    .contact-detail-val a:hover { color:var(--blanc); }
+
+    .contact-form-wrap {
+      background:var(--blanc);
+      border-radius:6px;
+      padding:2.5rem;
+    }
+
+    .contact-form-wrap h2 {
+      font-size:1.5rem; margin-bottom:0.4rem; color:var(--marine);
+    }
+    .contact-form-wrap .form-sub { font-size:0.85rem; color:var(--gris-mid); margin-bottom:2rem; }
+
+    form { display:flex; flex-direction:column; gap:1.1rem; }
+
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+
+    label { display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--gris-mid); margin-bottom:0.35rem; font-weight:400; }
+
+    input, select, textarea {
+      width:100%; padding:0.8rem 1rem;
+      border:1px solid rgba(0,0,0,0.12); border-radius:2px;
+      font-family:var(--font-corps); font-size:0.9rem;
+      color:var(--texte); background:var(--blanc);
+      transition:border-color 0.2s;
+    }
+    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--bordeaux); }
+    textarea { min-height:130px; resize:vertical; }
+
+    .form-submit {
+      background:var(--bordeaux); color:var(--blanc);
+      border:none; padding:0.9rem 2rem;
+      font-family:var(--font-corps); font-size:0.88rem;
+      font-weight:500; border-radius:2px; cursor:pointer;
+      letter-spacing:0.06em; text-transform:uppercase;
+      transition:background 0.2s; align-self:flex-start;
+    }
+    .form-submit:hover { background:var(--bordeaux-vif); }
+
+    .form-note { font-size:0.75rem; color:var(--gris-mid); }
+
+    @media (max-width:820px) {
+      .contact-layout { grid-template-columns:1fr; gap:3rem; }
+      .contact-page { padding-top:7rem; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="make – M. SOILEUX Maxence" />
+    <div class="nav-logo-text">
+      <strong>Formation Incendie Paris</strong>
+      M. SOILEUX Maxence · IPRP
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="firetraining-ms.html" class="nav-app">FireTraining MS</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="conseil.html">Conseil</a></li>
+    <li><a href="references.html">Références</a></li>
+    <li><a href="contact.html" class="nav-contact  active">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main class="contact-page">
+  <div class="contact-layout">
+    <div class="contact-sidebar">
+      <p class="section-tag tag-or">Parlons de votre projet</p>
+      <h1>Contactez-moi</h1>
+      <p class="sub">Réponse sous 24h ouvrées</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div>
+          <div class="contact-detail-label">Téléphone</div>
+          <div class="contact-detail-val"><a href="tel:+33684527858">06.84.52.78.58</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div>
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-val"><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div>
+          <div class="contact-detail-label">Zone d'intervention</div>
+          <div class="contact-detail-val">Paris & Île-de-France<br /><span style="font-size:0.82rem;color:rgba(255,255,255,0.4)">Déplacement gratuit dans Paris et petite couronne</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;padding:1.25rem;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:3px">
+        <div style="font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--or);font-weight:500;margin-bottom:0.4rem">Démo FireTraining MS</div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.6);line-height:1.65">Vous souhaitez tester l'application de réalité mixte ? Mentionnez-le dans votre message, je vous propose une démonstration sans engagement.</p>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h2>Envoyer un message</h2>
+      <p class="form-sub">Formation, devis, audit, démo FireTraining MS ou question réglementaire – je réponds à tout.</p>
+
+      <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required placeholder="Jean" />
+          </div>
+          <div>
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required placeholder="Dupont" />
+          </div>
+        </div>
+
+        <div>
+          <label for="organisation">Organisation</label>
+          <input type="text" id="organisation" name="organisation" placeholder="Entreprise / Mairie / OF..." />
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="jean@exemple.fr" />
+          </div>
+          <div>
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+          </div>
+        </div>
+
+        <div>
+          <label for="objet">Objet de la demande *</label>
+          <select id="objet" name="objet" required>
+            <option value="">– Choisir –</option>
+            <option>Formation incendie / EPI</option>
+            <option>Formation SST / Secourisme</option>
+            <option>Formation réglementaire</option>
+            <option>DUERP clé en main</option>
+            <option>Analyse RPS & Plan d'action</option>
+            <option>Audit sécurité / Conseil QSE</option>
+            <option>Normes ISO (45001 / 9001 / 14001)</option>
+            <option>PCA ou PCS</option>
+            <option>Démo App FireTraining MS (formation)</option>
+            <option>Licence App FireTraining MS (OF / formateur)</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Votre message *</label>
+          <textarea id="message" name="message" required placeholder="Décrivez votre besoin : effectifs, contexte, contraintes, délai souhaité..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        <p class="form-note">* Champs obligatoires. Vos données sont utilisées uniquement pour répondre à votre demande.</p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="assets/logo.png" alt="make" /><p>Formateur certifié & consultant IPRP en sécurité incendie, SST et management QSE à Paris et Île-de-France.</p></div>
+    <div class="footer-col"><h4>Prestations</h4><ul><li><a href="formations.html">Formations</a></li><li><a href="conseil.html">Conseil & Audit</a></li><li><a href="firetraining-ms.html">App FireTraining MS</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+33684527858">06.84.52.78.58</a></li><li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span><span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span></div>
+</footer>
+
+</body>
+</html>

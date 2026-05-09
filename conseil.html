@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conseil & Audit SST – QSE – DUERP – RPS Paris | make – M. SOILEUX Maxence IPRP</title>
+  <meta name="description" content="Conseil en prévention des risques professionnels à Paris : DUERP clé en main, analyse RPS et plan d'action, audit sécurité, normes ISO 45001/9001/14001, PCA, PCS. IPRP certifié Master MQSE." />
+  <link rel="canonical" href="https://www.formation-incendie-paris.com/conseil.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 9rem 2rem 4rem;
+      background: var(--marine-fonce);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--bordeaux) 0%, transparent 70%);
+    }
+    .page-hero h1 { color: var(--blanc); margin-bottom: 0.75rem; font-size: clamp(2.2rem,5vw,3.5rem); }
+    .page-hero p { color: rgba(255,255,255,0.5); max-width: 560px; font-size: 1rem; }
+
+    /* IPRP BANNER */
+    .iprp-banner {
+      background: var(--bordeaux);
+      padding: 1.5rem 2rem;
+    }
+    .iprp-banner-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .iprp-banner-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .iprp-banner p { color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.6; }
+    .iprp-banner strong { color: var(--blanc); font-weight: 500; }
+
+    /* PRESTATIONS */
+    .conseil-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .conseil-card {
+      background: var(--blanc);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 3px;
+      padding: 2rem;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .conseil-card:hover { box-shadow: 0 8px 32px rgba(43,58,107,0.1); transform: translateY(-2px); }
+    .conseil-card.highlight { background: var(--marine); border-color: var(--marine); }
+
+    .conseil-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .conseil-icon {
+      font-size: 2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .conseil-card h3 { font-size: 1.15rem; color: var(--texte); margin-bottom: 0.3rem; }
+    .conseil-card.highlight h3 { color: var(--blanc); }
+    .conseil-card .tag-small {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--bordeaux);
+      font-weight: 500;
+    }
+    .conseil-card.highlight .tag-small { color: rgba(255,255,255,0.5); }
+
+    .conseil-card p { font-size: 0.88rem; color: var(--gris-mid); line-height: 1.7; margin-bottom: 1rem; }
+    .conseil-card.highlight p { color: rgba(255,255,255,0.6); }
+
+    .conseil-card ul { list-style: none; }
+    .conseil-card ul li {
+      font-size: 0.83rem;
+      color: var(--gris-mid);
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--gris-clair);
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .conseil-card.highlight ul li { color: rgba(255,255,255,0.6); border-bottom-color: rgba(255,255,255,0.08); }
+    .conseil-card ul li::before { content: '→'; color: var(--bordeaux); flex-shrink: 0; }
+    .conseil-card.highlight ul li::before { color: rgba(255,255,255,0.4); }
+
+    /* MÉTHODE */
+    .methode-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .methode-step {
+      padding: 2rem 1.5rem;
+      border-right: 1px solid rgba(0,0,0,0.07);
+      position: relative;
+    }
+    .methode-step:last-child { border-right: none; }
+
+    .step-n {
+      font-family: var(--font-titre);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--gris-clair);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .methode-step h3 { font-size: 1rem; color: var(--marine); margin-bottom: 0.5rem; }
+    .methode-step p { font-size: 0.82rem; color: var(--gris-mid); line-height: 1.65; }
+
+    /* CTA */
+    .cta-strip {
+      background: var(--bordeaux);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cta-strip h2 { color: var(--blanc); font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.75rem; }
+    .cta-strip p { color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+    @media (max-width: 760px) {
+      .methode-steps { grid-template-columns: 1fr 1fr; }
+      .methode-step { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    }
+    @media (max-width: 480px) {
+      .methode-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="make – M. SOILEUX Maxence" />
+    <div class="nav-logo-text">
+      <strong>Formation Incendie Paris</strong>
+      M. SOILEUX Maxence · IPRP
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="firetraining-ms.html" class="nav-app">FireTraining MS</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="conseil.html" class="active">Conseil</a></li>
+    <li><a href="references.html">Références</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header class="page-hero" role="banner">
+  <div class="section-inner">
+    <p class="section-tag tag-or">IPRP – Expert en prévention</p>
+    <h1>Conseil & Audit</h1>
+    <p>Accompagnement stratégique et opérationnel en santé-sécurité au travail, management QSE et gestion des risques. Intervention d'un IPRP déclaré.</p>
+  </div>
+</header>
+
+<div class="iprp-banner" role="complementary">
+  <div class="iprp-banner-inner">
+    <div class="iprp-banner-icon">⚖️</div>
+    <p><strong>IPRP – Intervenant en Prévention des Risques Professionnels</strong> · Statut reconnu par le Code du travail (art. L.4644-1). Mes interventions s'inscrivent dans votre obligation légale d'évaluation et de prévention des risques professionnels.</p>
+  </div>
+</div>
+
+<!-- PRESTATIONS CONSEIL -->
+<section style="padding:4.5rem 2rem; background:var(--creme)" aria-labelledby="prestations-titre">
+  <div class="section-inner">
+    <p class="section-tag tag-bordeaux">Prestations</p>
+    <h2 id="prestations-titre" style="margin-bottom:0.5rem">Mes missions de conseil</h2>
+    <p style="color:var(--gris-mid);margin-bottom:2.5rem;max-width:520px;font-size:0.95rem">Chaque mission commence par un diagnostic de votre situation réglementaire et organisationnelle.</p>
+
+    <div class="conseil-grid">
+      <div class="conseil-card highlight">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Obligation légale</div>
+            <h3>DUERP Clé en main</h3>
+          </div>
+        </div>
+        <p>Je réalise votre Document Unique d'Évaluation des Risques Professionnels de A à Z : analyse des postes, évaluation des risques, plan d'action priorisé, mise à jour annuelle.</p>
+        <ul>
+          <li>Visite terrain et entretiens</li>
+          <li>Identification et cotation des risques</li>
+          <li>Plan d'action chiffré et priorisé</li>
+          <li>Document finalisé livré en 15 jours</li>
+          <li>Présentation au CSE / CSSCT incluse</li>
+        </ul>
+      </div>
+
+      <div class="conseil-card">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Risques psychosociaux</div>
+            <h3>Analyse RPS & Plan d'action</h3>
+          </div>
+        </div>
+        <p>Diagnostic complet des risques psychosociaux dans votre organisation : stress, conflits, burn-out, harcèlement. Restitution et plan d'action concret.</p>
+        <ul>
+          <li>Questionnaire anonyme et entretiens</li>
+          <li>Analyse des facteurs de risque (modèle Karasek)</li>
+          <li>Restitution chiffrée et anonymisée</li>
+          <li>Plan d'action priorisé et budgété</li>
+          <li>Suivi à 6 mois inclus</li>
+        </ul>
+      </div>
+
+      <div class="conseil-card">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Audit & conformité</div>
+            <h3>Audit Sécurité & Incendie</h3>
+          </div>
+        </div>
+        <p>Audit de conformité réglementaire de vos installations, procédures et documents obligatoires. Rapport détaillé avec préconisations classées par priorité.</p>
+        <ul>
+          <li>Vérification des obligations réglementaires</li>
+          <li>Revue documentaire complète</li>
+          <li>Inspection terrain des installations</li>
+          <li>Rapport d'audit avec plan de mise en conformité</li>
+        </ul>
+      </div>
+
+      <div class="conseil-card">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Management QSE</div>
+            <h3>Normes ISO 45001 · 9001 · 14001</h3>
+          </div>
+        </div>
+        <p>Accompagnement à la mise en place ou au maintien de votre système de management QSE selon les normes ISO en vigueur, de l'état des lieux à la certification.</p>
+        <ul>
+          <li>Analyse des écarts (gap analysis)</li>
+          <li>Rédaction de la documentation SMQ</li>
+          <li>Formation des équipes internes</li>
+          <li>Préparation aux audits de certification</li>
+        </ul>
+      </div>
+
+      <div class="conseil-card">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Continuité d'activité</div>
+            <h3>Plan de Continuité d'Activité (PCA)</h3>
+          </div>
+        </div>
+        <p>Élaboration de votre PCA pour garantir la résilience de votre organisation face aux crises : sinistre, cyberattaque, pandémie, défaillance fournisseur.</p>
+        <ul>
+          <li>Analyse d'impact sur l'activité (BIA)</li>
+          <li>Identification des ressources critiques</li>
+          <li>Rédaction des procédures de secours</li>
+          <li>Test et exercice de crise</li>
+        </ul>
+      </div>
+
+      <div class="conseil-card">
+        <div class="conseil-card-header">
+          <div>
+            <div class="tag-small">Collectivités</div>
+            <h3>Plan Communal de Sauvegarde (PCS)</h3>
+          </div>
+        </div>
+        <p>Rédaction ou révision de votre Plan Communal de Sauvegarde conformément aux obligations issues de la loi du 13 août 2004 et du décret du 13 septembre 2005.</p>
+        <ul>
+          <li>Diagnostic des risques communaux</li>
+          <li>Organisation de la cellule de crise</li>
+          <li>Fiches réflexes par scénario</li>
+          <li>Annuaire de crise et exercice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE -->
+<section style="padding:4.5rem 2rem;background:var(--blanc)" aria-labelledby="methode-titre">
+  <div class="section-inner">
+    <p class="section-tag tag-bordeaux">Méthode</p>
+    <h2 id="methode-titre" style="margin-bottom:2.5rem">Comment j'interviens</h2>
+    <div class="methode-steps">
+      <div class="methode-step">
+        <div class="step-n">01</div>
+        <h3>Diagnostic</h3>
+        <p>Analyse de votre situation réglementaire, de votre secteur et de vos obligations. Échange initial gratuit.</p>
+      </div>
+      <div class="methode-step">
+        <div class="step-n">02</div>
+        <h3>Proposition</h3>
+        <p>Remise d'une proposition détaillée avec périmètre, livrables, délais et budget. Devis sous 48h.</p>
+      </div>
+      <div class="methode-step">
+        <div class="step-n">03</div>
+        <h3>Terrain</h3>
+        <p>Intervention sur site : visites, entretiens, analyse documentaire. Je viens à vous.</p>
+      </div>
+      <div class="methode-step">
+        <div class="step-n">04</div>
+        <h3>Livrables</h3>
+        <p>Remise des documents finalisés, présentation aux parties prenantes (CSE, direction, CSSCT).</p>
+      </div>
+      <div class="methode-step">
+        <div class="step-n">05</div>
+        <h3>Suivi</h3>
+        <p>Accompagnement dans la mise en œuvre du plan d'action, disponibilité pour questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="section-inner">
+    <h2>Besoin d'un accompagnement ?</h2>
+    <p>Diagnostic initial offert. Je vous propose un échange de 30 minutes pour cerner votre situation et vous orienter.</p>
+    <a href="contact.html" class="btn-outline-blanc">Prendre rendez-vous →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="make" />
+      <p>Formateur certifié & consultant IPRP en sécurité incendie, SST et management QSE à Paris et Île-de-France.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Conseil</h4>
+      <ul>
+        <li><a href="conseil.html">DUERP clé en main</a></li>
+        <li><a href="conseil.html">Analyse RPS</a></li>
+        <li><a href="conseil.html">Audit sécurité</a></li>
+        <li><a href="conseil.html">ISO 45001 / 9001 / 14001</a></li>
+        <li><a href="conseil.html">PCA & PCS</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+33684527858">06.84.52.78.58</a></li>
+        <li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li>
+        <li><a href="contact.html">Formulaire de contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span>
+    <span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span>
+  </div>
+</footer>
+
+</body>
+</html>

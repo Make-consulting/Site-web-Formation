@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations Incendie, SST & Réglementaires Paris | make – M. SOILEUX Maxence</title>
+  <meta name="description" content="Formations incendie, SST secourisme et réglementaires à Paris. SSIAP 3, formateur agréé INRS. Sessions en entreprise, collectivités, ERP. Attestations conformes." />
+  <link rel="canonical" href="https://www.formation-incendie-paris.com/formations.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 9rem 2rem 4rem;
+      background: var(--marine-fonce);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--bordeaux) 0%, transparent 70%);
+    }
+    .page-hero h1 { color: var(--blanc); margin-bottom: 0.75rem; font-size: clamp(2.2rem,5vw,3.5rem); }
+    .page-hero p { color: rgba(255,255,255,0.5); max-width: 560px; font-size: 1rem; }
+
+    /* Formations grid */
+    .formations-section { padding: 4.5rem 2rem; }
+    .formations-section:nth-child(odd) { background: var(--creme); }
+
+    .formation-block {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .formation-sidebar {
+      position: sticky;
+      top: 88px;
+    }
+
+    .formation-num {
+      font-family: var(--font-titre);
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--gris-clair);
+      line-height: 1;
+      margin-bottom: -1rem;
+    }
+
+    .formation-sidebar h2 {
+      font-size: 1.8rem;
+      color: var(--marine);
+      margin-bottom: 0.75rem;
+    }
+
+    .formation-sidebar p {
+      font-size: 0.88rem;
+      color: var(--gris-mid);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .formation-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--gris-mid);
+    }
+    .meta-label { font-weight: 500; color: var(--texte); }
+
+    .formations-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .formation-card {
+      background: var(--blanc);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-top: 3px solid var(--bordeaux);
+      border-radius: 3px;
+      padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .formation-card:hover { box-shadow: 0 6px 24px rgba(43,58,107,0.1); transform: translateY(-2px); }
+    .formation-card.marine-top { border-top-color: var(--marine); }
+
+    .formation-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--texte); }
+    .formation-card .duree {
+      display: inline-block;
+      background: var(--bordeaux-pale);
+      color: var(--bordeaux);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+    }
+    .formation-card.marine-top .duree { background: rgba(43,58,107,0.08); color: var(--marine); }
+    .formation-card ul { list-style: none; margin-top: 0.75rem; }
+    .formation-card ul li {
+      font-size: 0.83rem;
+      color: var(--gris-mid);
+      padding: 0.2rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    .formation-card ul li::before { content: '→'; color: var(--bordeaux); flex-shrink: 0; }
+
+    /* CTA bandeau */
+    .cta-strip {
+      background: var(--bordeaux);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cta-strip h2 { color: var(--blanc); font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 0.75rem; }
+    .cta-strip p { color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+    @media (max-width: 760px) {
+      .formation-block { grid-template-columns: 1fr; gap: 2rem; }
+      .formation-sidebar { position: static; }
+      .formation-num { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="make – M. SOILEUX Maxence" />
+    <div class="nav-logo-text">
+      <strong>Formation Incendie Paris</strong>
+      M. SOILEUX Maxence · IPRP
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="firetraining-ms.html" class="nav-app">FireTraining MS</a></li>
+    <li><a href="formations.html" class="active">Formations</a></li>
+    <li><a href="conseil.html">Conseil</a></li>
+    <li><a href="references.html">Références</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header class="page-hero" role="banner">
+  <div class="section-inner">
+    <p class="section-tag tag-or">Catalogue 2025</p>
+    <h1>Formations</h1>
+    <p>Toutes mes formations sont dispensées en intra-entreprise à Paris et en Île-de-France, avec attestations de formation conformes à la réglementation.</p>
+  </div>
+</header>
+
+<!-- BLOC 1 : INCENDIE -->
+<section class="formations-section" aria-labelledby="incendie-titre">
+  <div class="formation-block">
+    <div class="formation-sidebar">
+      <div class="formation-num">01</div>
+      <h2 id="incendie-titre">Sécurité Incendie</h2>
+      <p>Formations pratiques conformes aux exigences réglementaires pour tous types d'établissements : ERP, IGH, industrie, tertiaire.</p>
+      <div class="formation-meta">
+        <div class="meta-item"><span class="meta-label">Intervenant :</span> SSIAP 3 certifié</div>
+        <div class="meta-item"><span class="meta-label">Format :</span> Intra-entreprise</div>
+        <div class="meta-item"><span class="meta-label">Innovation :</span> Réalité mixte disponible</div>
+      </div>
+      <a href="contact.html" class="btn-bordeaux">Demander un devis</a>
+    </div>
+    <div class="formations-cards">
+      <div class="formation-card">
+        <h3>Sensibilisation incendie</h3>
+        <span class="duree">½ journée</span>
+        <ul>
+          <li>Triangle du feu, classes d'incendie</li>
+          <li>Comportement en cas d'alarme</li>
+          <li>Consignes d'évacuation</li>
+          <li>Utilisation des extincteurs (pratique)</li>
+        </ul>
+      </div>
+      <div class="formation-card">
+        <h3>Équipier de 1ère Intervention</h3>
+        <span class="duree">½ journée</span>
+        <ul>
+          <li>Rôles et responsabilités</li>
+          <li>Détection et alerte</li>
+          <li>Mise en œuvre des moyens d'extinction</li>
+          <li>Exercice d'évacuation</li>
+        </ul>
+      </div>
+      <div class="formation-card">
+        <h3>Formation guide-serre-file</h3>
+        <span class="duree">½ journée</span>
+        <ul>
+          <li>Rôle du guide et du serre-file</li>
+          <li>Organisation de l'évacuation</li>
+          <li>Gestion des PMR</li>
+          <li>Retour d'expérience exercice</li>
+        </ul>
+      </div>
+      <div class="formation-card" style="border-top-color:var(--marine)">
+        <h3>Formation avec FireTraining MS</h3>
+        <span class="duree" style="background:rgba(43,58,107,0.08);color:var(--marine)">Réalité mixte</span>
+        <ul>
+          <li>Immersion en réalité mixte</li>
+          <li>Scénarios d'incendie interactifs</li>
+          <li>Évaluation des réactions en temps réel</li>
+          <li>Complément à la formation terrain</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOC 2 : SST -->
+<section class="formations-section" aria-labelledby="sst-titre">
+  <div class="formation-block">
+    <div class="formation-sidebar">
+      <div class="formation-num">02</div>
+      <h2 id="sst-titre">SST & Secourisme</h2>
+      <p>Formations de sauveteur-secouriste du travail et de premiers secours, dispensées selon le référentiel national INRS.</p>
+      <div class="formation-meta">
+        <div class="meta-item"><span class="meta-label">Agrément :</span> Formateur INRS</div>
+        <div class="meta-item"><span class="meta-label">Attestation :</span> Certifiante nationale</div>
+      </div>
+      <a href="contact.html" class="btn-bordeaux">Demander un devis</a>
+    </div>
+    <div class="formations-cards">
+      <div class="formation-card">
+        <h3>SST Initial</h3>
+        <span class="duree">2 journées</span>
+        <ul>
+          <li>Cadre juridique et rôle du SST</li>
+          <li>Protection, examen, alerte</li>
+          <li>Gestes de premiers secours</li>
+          <li>Attestation nationale certifiante</li>
+        </ul>
+      </div>
+      <div class="formation-card">
+        <h3>Recyclage SST</h3>
+        <span class="duree">1 journée</span>
+        <ul>
+          <li>Actualisation des connaissances</li>
+          <li>Retour sur les évolutions réglementaires</li>
+          <li>Mise en situation pratique</li>
+          <li>Renouvellement de l'attestation</li>
+        </ul>
+      </div>
+      <div class="formation-card">
+        <h3>PSC – Premiers Secours Civiques</h3>
+        <span class="duree">1 journée</span>
+        <ul>
+          <li>Obstruction des voies aériennes</li>
+          <li>Hémorragies, malaises, plaies</li>
+          <li>Arrêt cardiaque et DAE</li>
+          <li>Attestation PSC</li>
+        </ul>
+      </div>
+      <div class="formation-card">
+        <h3>Gestes Qui Sauvent (GQS)</h3>
+        <span class="duree">2 heures</span>
+        <ul>
+          <li>Appel des secours</li>
+          <li>Compressions thoraciques</li>
+          <li>Utilisation du défibrillateur</li>
+          <li>Certificat de sensibilisation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOC 3 : RÉGLEMENTAIRES -->
+<section class="formations-section" aria-labelledby="reglementaires-titre">
+  <div class="formation-block">
+    <div class="formation-sidebar">
+      <div class="formation-num">03</div>
+      <h2 id="reglementaires-titre">Formations Réglementaires</h2>
+      <p>Toutes les formations obligatoires liées à votre secteur d'activité, conçues sur mesure selon votre DUERP et vos risques spécifiques.</p>
+      <div class="formation-meta">
+        <div class="meta-item"><span class="meta-label">Approche :</span> Sur mesure</div>
+        <div class="meta-item"><span class="meta-label">Supports :</span> Fournis inclus</div>
+      </div>
+      <a href="contact.html" class="btn-bordeaux">Demander un devis</a>
+    </div>
+    <div class="formations-cards">
+      <div class="formation-card marine-top">
+        <h3>Risques chimiques</h3>
+        <span class="duree marine-top">½ à 1 journée</span>
+        <ul>
+          <li>Identification des agents dangereux</li>
+          <li>EPI adaptés et procédures</li>
+          <li>FDS et étiquetage CLP</li>
+        </ul>
+      </div>
+      <div class="formation-card marine-top">
+        <h3>Travail en hauteur</h3>
+        <span class="duree marine-top">1 journée</span>
+        <ul>
+          <li>Risques et réglementation</li>
+          <li>EPI antichute et vérification</li>
+          <li>Plan de prévention</li>
+        </ul>
+      </div>
+      <div class="formation-card marine-top">
+        <h3>Prévention des RPS</h3>
+        <span class="duree marine-top">½ journée</span>
+        <ul>
+          <li>Identifier les facteurs de risques psychosociaux</li>
+          <li>Comprendre les mécanismes du stress au travail</li>
+          <li>Bonnes pratiques managériales</li>
+        </ul>
+      </div>
+      <div class="formation-card marine-top">
+        <h3>Risque amiante SS4</h3>
+        <span class="duree marine-top">Sur devis</span>
+        <ul>
+          <li>Réglementation amiante</li>
+          <li>Repérage avant travaux</li>
+          <li>Procédures encadrant technique</li>
+          <li>Aide à la rédaction de modes opératoires</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip" role="complementary">
+  <div class="section-inner">
+    <h2>Un besoin spécifique ?</h2>
+    <p>Toutes mes formations sont adaptables à votre secteur, vos effectifs et vos contraintes horaires. Contactez-moi pour un programme sur-mesure.</p>
+    <a href="contact.html" class="btn-outline-blanc">Demander un programme sur-mesure →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="make" />
+      <p>Formateur certifié & consultant IPRP en sécurité incendie, SST et management QSE à Paris et Île-de-France.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Formations</h4>
+      <ul>
+        <li><a href="formations.html">Sécurité incendie</a></li>
+        <li><a href="formations.html">SST & secourisme</a></li>
+        <li><a href="formations.html">Réglementaires</a></li>
+        <li><a href="firetraining-ms.html">App FireTraining MS</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+33684527858">06.84.52.78.58</a></li>
+        <li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li>
+        <li><a href="contact.html">Formulaire de contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span>
+    <span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span>
+  </div>
+</footer>
+
+</body>
+</html>

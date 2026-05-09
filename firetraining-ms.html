@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FireTraining MS – Application Réalité Mixte Formation Incendie | make – M. SOILEUX Maxence</title>
+  <meta name="description" content="FireTraining MS : application de réalité mixte pour la formation incendie. Immersion totale, scénarios interactifs, évaluation en temps réel. Disponible en formation ou en licence pour organismes de formation et formateurs indépendants." />
+  <link rel="canonical" href="https://www.formation-incendie-paris.com/firetraining-ms.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FireTraining MS",
+    "applicationCategory": "EducationalApplication",
+    "description": "Application de réalité mixte pour la formation incendie. Scénarios immersifs, évaluation en temps réel.",
+    "offers": [
+      {"@type": "Offer", "name": "Formation avec FireTraining MS", "availability": "https://schema.org/InStock"},
+      {"@type": "Offer", "name": "Licence FireTraining MS pour OF", "availability": "https://schema.org/InStock"}
+    ],
+    "creator": {"@type": "Person", "name": "SOILEUX Maxence"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* HERO APP */
+    #hero-app {
+      min-height: 90vh;
+      background: var(--marine-fonce);
+      display: flex;
+      align-items: center;
+      padding: 7rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-app-grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-app-glow {
+      position: absolute;
+      top: 30%; left: 55%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139,26,26,0.12) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    #hero-app h1 {
+      color: var(--blanc);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      margin-bottom: 0.5rem;
+    }
+    .hero-app-sub {
+      font-family: var(--font-titre);
+      font-style: italic;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 1.5rem;
+    }
+    .hero-app-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .hero-app-visual {
+      background: rgba(43,58,107,0.3);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-emoji { font-size: 8rem; position: relative; z-index: 1; }
+    .app-title-big {
+      font-family: var(--font-titre);
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: -0.02em;
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .hero-app-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(139,26,26,0.08) 0%, transparent 50%);
+    }
+
+    /* OFFRES */
+    .offres-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .offre-card {
+      border-radius: 6px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offre-card.formation {
+      background: var(--creme);
+      border: 2px solid rgba(43,58,107,0.15);
+    }
+
+    .offre-card.licence {
+      background: var(--marine);
+      border: 2px solid var(--marine-clair);
+    }
+
+    .offre-num {
+      font-family: var(--font-titre);
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: -1rem;
+    }
+    .offre-card.formation .offre-num { color: rgba(43,58,107,0.1); }
+    .offre-card.licence .offre-num { color: rgba(255,255,255,0.07); }
+
+    .offre-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .offre-card.formation .offre-tag { color: var(--bordeaux); }
+    .offre-card.licence .offre-tag { color: var(--or); }
+
+    .offre-card h2 { font-size: 1.8rem; margin-bottom: 0.75rem; }
+    .offre-card.formation h2 { color: var(--marine); }
+    .offre-card.licence h2 { color: var(--blanc); }
+
+    .offre-card p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .offre-card.formation p { color: var(--gris-mid); }
+    .offre-card.licence p { color: rgba(255,255,255,0.6); }
+
+    .offre-ul { list-style: none; margin-bottom: 2rem; }
+    .offre-ul li {
+      font-size: 0.85rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+    .offre-card.licence .offre-ul li { border-bottom-color: rgba(255,255,255,0.07); }
+    .offre-ul li .check { flex-shrink: 0; font-weight: 500; }
+    .offre-card.formation .offre-ul li { color: var(--gris-mid); }
+    .offre-card.formation .offre-ul li .check { color: var(--bordeaux); }
+    .offre-card.licence .offre-ul li { color: rgba(255,255,255,0.65); }
+    .offre-card.licence .offre-ul li .check { color: var(--or); }
+
+    /* AVANTAGES TECH */
+    .avantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .avantage-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--blanc);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 3px;
+    }
+    .avantage-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .avantage-item h3 { font-size: 1rem; color: var(--marine); margin-bottom: 0.5rem; }
+    .avantage-item p { font-size: 0.83rem; color: var(--gris-mid); line-height: 1.6; }
+
+    /* CONTACT APP CTA */
+    .app-cta {
+      background: var(--bordeaux);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .app-cta h2 { color: var(--blanc); margin-bottom: 0.75rem; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+    .app-cta p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; font-size: 0.95rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .app-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .hero-app-grid { grid-template-columns: 1fr; }
+      .hero-app-visual { aspect-ratio: 16/9; }
+      .offres-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="make – M. SOILEUX Maxence" />
+    <div class="nav-logo-text">
+      <strong>Formation Incendie Paris</strong>
+      M. SOILEUX Maxence · IPRP
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="firetraining-ms.html" class="active">FireTraining MS</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="conseil.html">Conseil</a></li>
+    <li><a href="references.html">Références</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header id="hero-app" role="banner">
+  <div class="hero-app-glow"></div>
+  <div class="hero-app-grid">
+    <div>
+      <h1>FireTraining MS</h1>
+      <p class="hero-app-sub">Réalité Mixte · Formation Incendie</p>
+      <p class="hero-app-desc">
+        Application de réalité mixte dédiée à la formation incendie professionnelle. Développée par un formateur SSIAP 3, pour des formateurs et des stagiaires exigeants.
+      </p>
+      <div class="hero-btns">
+        <a href="#offres" class="btn-bordeaux">Voir les offres</a>
+        <a href="contact.html" class="btn-outline-blanc">Demander une démo →</a>
+      </div>
+    </div>
+    <div class="hero-app-visual" role="img" aria-label="Interface de l'application FireTraining MS en réalité mixte">
+      <div class="app-title-big">FireTraining MS</div>
+    </div>
+  </div>
+</header>
+
+<!-- AVANTAGES PÉDAGOGIQUES -->
+<section style="padding:4.5rem 2rem;background:var(--creme)" aria-labelledby="avantages-titre">
+  <div class="section-inner">
+    <p class="section-tag tag-bordeaux">Apports pédagogiques</p>
+    <h2 id="avantages-titre" style="margin-bottom:0.5rem">Ce que la réalité mixte apporte à vos formations</h2>
+    <p style="color:var(--gris-mid);margin-bottom:2.5rem;max-width:520px;font-size:0.95rem">La réalité mixte permet de placer le stagiaire dans des scénarios d'incendie réalistes, sans exposition au danger réel.</p>
+    <div class="avantages-grid">
+      <div class="avantage-item">
+        <h3>Scénarios réalistes</h3>
+        <p>Départ de feu, fumée, propagation : vos stagiaires vivent la situation avant de l'affronter réellement.</p>
+      </div>
+      <div class="avantage-item">
+        <h3>Évaluation objective</h3>
+        <p>Mesure en temps réel des comportements, temps de réaction et prises de décision. Données exportables.</p>
+      </div>
+      <div class="avantage-item">
+        <h3>Scénarios répétables</h3>
+        <p>Rejouez le même scénario à l'infini, sans coût supplémentaire. Idéal pour les recyclages.</p>
+      </div>
+      <div class="avantage-item">
+        <h3>Accessible à tous</h3>
+        <p>Convient aux stagiaires qui ne peuvent pratiquer physiquement, et réduit la prise de risque en formation.</p>
+      </div>
+      <div class="avantage-item">
+        <h3>Votre bâtiment modélisé</h3>
+        <p>Possibilité de recréer vos locaux dans l'application pour une immersion encore plus réaliste. (roadmap)</p>
+      </div>
+      <div class="avantage-item">
+        <h3>Complémentaire au terrain</h3>
+        <p>FireTraining MS complète la formation pratique, ne la remplace pas. Attestations conformes à la réglementation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRES -->
+<section id="offres" style="padding:4.5rem 2rem;background:var(--blanc)" aria-labelledby="offres-titre">
+  <div class="section-inner">
+    <p class="section-tag tag-bordeaux">Trois façons d'accéder à FireTraining MS</p>
+    <h2 id="offres-titre" style="margin-bottom:2.5rem">Choisissez votre formule</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem">
+
+      <!-- Offre 1 : Formation entreprises -->
+      <div class="offre-card formation">
+        <div class="offre-num">01</div>
+        <div class="offre-tag">Pour vos équipes</div>
+        <h2>Formation avec FireTraining MS</h2>
+        <p>J'interviens dans vos locaux avec l'application intégrée à la session de formation incendie. Le matériel est fourni.</p>
+        <ul class="offre-ul">
+          <li><span class="check">✓</span>Intervention en intra-entreprise à Paris & IDF</li>
+          <li><span class="check">✓</span>Formation incendie classique + module FireTraining MS</li>
+          <li><span class="check">✓</span>Casques de réalité mixte fournis</li>
+          <li><span class="check">✓</span>Rapport individuel des stagiaires</li>
+          <li><span class="check">✓</span>Attestations de formation conformes</li>
+          <li><span class="check">✓</span>Devis sur mesure selon effectifs</li>
+        </ul>
+        <a href="contact.html" class="btn-marine">Demander un devis →</a>
+      </div>
+
+      <!-- Offre 2 : Licence OF -->
+      <div class="offre-card licence">
+        <div class="offre-num">02</div>
+        <div class="offre-tag">Pour les organismes de formation</div>
+        <h2>Licence annuelle OF</h2>
+        <p>Vous êtes organisme de formation ? Intégrez FireTraining MS à votre catalogue avec une licence incluant support, mises à jour et nouveaux scénarios.</p>
+        <ul class="offre-ul">
+          <li><span class="check">✓</span>Accès complet à l'application</li>
+          <li><span class="check">✓</span>Formation à l'utilisation (2h)</li>
+          <li><span class="check">✓</span>Support technique inclus</li>
+          <li><span class="check">✓</span>Mises à jour et nouveaux scénarios inclus</li>
+          <li><span class="check">✓</span>Tableau de bord formateur avec analytics</li>
+          <li><span class="check">✓</span>Tarif annuel sur devis</li>
+        </ul>
+        <a href="contact.html" class="btn-bordeaux">Nous contacter →</a>
+      </div>
+
+      <!-- Offre 3 : Achat direct formateurs -->
+      <div class="offre-card formation" style="border-top:3px solid var(--marine)">
+        <div class="offre-num" style="color:rgba(43,58,107,0.08)">03</div>
+        <div class="offre-tag" style="color:var(--marine)">Pour les formateurs indépendants</div>
+        <h2 style="color:var(--marine)">Achat de l'application</h2>
+        <p>Vous êtes formateur indépendant ? Achetez directement le fichier d'installation et travaillez sans abonnement. Des scénarios supplémentaires (DLC) sont disponibles à l'achat pour enrichir vos sessions.</p>
+        <ul class="offre-ul">
+          <li><span class="check" style="color:var(--marine)">✓</span>Fichier d'installation livré directement</li>
+          <li><span class="check" style="color:var(--marine)">✓</span>Application de base : scénario tronc commun</li>
+          <li><span class="check" style="color:var(--marine)">✓</span>Achat unique, sans abonnement annuel</li>
+          <li><span class="check" style="color:var(--marine)">✓</span>Scénarios DLC disponibles à l'unité</li>
+          <li><span class="check" style="color:var(--marine)">✓</span>Travaillez en totale autonomie</li>
+          <li><span class="check" style="color:var(--marine)">✓</span>Tarif sur demande</li>
+        </ul>
+        <a href="contact.html" class="btn-marine">Obtenir un devis →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:4.5rem 2rem;background:var(--creme)" aria-labelledby="faq-titre">
+  <div class="section-inner">
+    <p class="section-tag tag-bordeaux">Questions fréquentes</p>
+    <h2 id="faq-titre" style="margin-bottom:2rem">À vos questions</h2>
+    <div style="max-width:780px;display:flex;flex-direction:column;gap:1rem">
+
+      <details style="background:var(--blanc);border:1px solid rgba(0,0,0,0.06);border-radius:3px;padding:1.25rem 1.5rem">
+        <summary style="cursor:pointer;font-weight:500;color:var(--marine);font-size:0.95rem;list-style:none">Quel matériel est nécessaire pour utiliser FireTraining MS ?</summary>
+        <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--gris-mid);line-height:1.75">FireTraining MS est compatible avec les casques de réalité mixte de type Meta Quest ou équivalent. Pour la formule formation, je fournis le matériel. Pour la licence OF ou l'achat formateur, je vous conseille sur les équipements compatibles.</p>
+      </details>
+
+      <details style="background:var(--blanc);border:1px solid rgba(0,0,0,0.06);border-radius:3px;padding:1.25rem 1.5rem">
+        <summary style="cursor:pointer;font-weight:500;color:var(--marine);font-size:0.95rem;list-style:none">L'utilisation de FireTraining MS remplace-t-elle la formation pratique réglementaire ?</summary>
+        <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--gris-mid);line-height:1.75">Non. FireTraining MS est un complément pédagogique, pas un substitut. Les attestations de formation délivrées correspondent à des formations conformes au référentiel réglementaire, avec les éléments pratiques obligatoires.</p>
+      </details>
+
+      <details style="background:var(--blanc);border:1px solid rgba(0,0,0,0.06);border-radius:3px;padding:1.25rem 1.5rem">
+        <summary style="cursor:pointer;font-weight:500;color:var(--marine);font-size:0.95rem;list-style:none">Puis-je tester l'application avant de souscrire ?</summary>
+        <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--gris-mid);line-height:1.75">Absolument. Je propose des démos sur rendez-vous, dans mes locaux à Paris ou directement chez vous en Île-de-France. Contactez-moi pour planifier une session de découverte.</p>
+      </details>
+
+      <details style="background:var(--blanc);border:1px solid rgba(0,0,0,0.06);border-radius:3px;padding:1.25rem 1.5rem">
+        <summary style="cursor:pointer;font-weight:500;color:var(--marine);font-size:0.95rem;list-style:none">L'app est-elle disponible en dehors de l'Île-de-France ?</summary>
+        <p style="margin-top:0.75rem;font-size:0.88rem;color:var(--gris-mid);line-height:1.75">Pour la formule formation, j'interviens principalement en Île-de-France. Pour la licence, elle est disponible partout en France. N'hésitez pas à me contacter pour discuter de votre situation.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="app-cta" role="complementary">
+  <h2>Prêt à intégrer la réalité mixte ?</h2>
+  <p>Que vous souhaitiez former vos équipes ou enrichir votre catalogue de formations, FireTraining MS s'adapte à votre projet.</p>
+  <div class="app-cta-btns">
+    <a href="contact.html" class="btn-outline-blanc">Demander une démo gratuite</a>
+    <a href="contact.html" class="btn-outline-blanc">Obtenir un devis licence →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="make" />
+      <p>Formateur certifié & consultant IPRP en sécurité incendie, SST et management QSE à Paris et Île-de-France.</p>
+    </div>
+    <div class="footer-col">
+      <h4>FireTraining MS</h4>
+      <ul>
+        <li><a href="firetraining-ms.html#offres">Formation avec l'app</a></li>
+        <li><a href="firetraining-ms.html#offres">Licence pour OF</a></li>
+        <li><a href="contact.html">Demander une démo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+33684527858">06.84.52.78.58</a></li>
+        <li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li>
+        <li><a href="contact.html">Formulaire de contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span>
+    <span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span>
+  </div>
+</footer>
+
+</body>
+</html>
