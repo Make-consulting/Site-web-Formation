@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales & Politique de confidentialité | make – M. SOILEUX Maxence</title>
+  <meta name="description" content="Mentions légales, politique de confidentialité et gestion des cookies du site formation-incendie-paris.com – M. SOILEUX Maxence, auto-entrepreneur." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 9rem 2rem 4rem;
+      background: var(--marine-fonce);
+      position: relative;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--bordeaux) 0%, transparent 70%);
+    }
+    .page-hero h1 { color: var(--blanc); font-size: clamp(2rem,4vw,3rem); margin-bottom: 0.5rem; }
+    .page-hero p { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+
+    .legal-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .legal-block {
+      margin-bottom: 3rem;
+    }
+
+    .legal-block h2 {
+      font-family: var(--font-titre);
+      font-size: 1.5rem;
+      color: var(--marine);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--bordeaux);
+    }
+
+    .legal-block h3 {
+      font-size: 1rem;
+      color: var(--texte);
+      margin: 1.25rem 0 0.5rem;
+      font-weight: 600;
+    }
+
+    .legal-block p {
+      font-size: 0.9rem;
+      color: var(--gris-mid);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-block ul {
+      list-style: none;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .legal-block ul li {
+      font-size: 0.9rem;
+      color: var(--gris-mid);
+      padding: 0.25rem 0;
+      display: flex;
+      gap: 0.6rem;
+    }
+    .legal-block ul li::before { content: '—'; color: var(--bordeaux); flex-shrink: 0; }
+
+    .legal-block a { color: var(--bordeaux); text-decoration: none; }
+    .legal-block a:hover { text-decoration: underline; }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 1rem 0;
+    }
+    .legal-table th {
+      background: var(--marine);
+      color: var(--blanc);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+    .legal-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gris-clair);
+      color: var(--gris-mid);
+      vertical-align: top;
+    }
+    .legal-table tr:last-child td { border-bottom: none; }
+
+    .nav-legal {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--gris-clair);
+      padding-bottom: 1rem;
+    }
+    .nav-legal a {
+      font-size: 0.82rem;
+      color: var(--bordeaux);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .nav-legal a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="make – M. SOILEUX Maxence" />
+    <div class="nav-logo-text">
+      <strong>Formation Incendie Paris</strong>
+      M. SOILEUX Maxence · IPRP
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="firetraining-ms.html" class="nav-app">FireTraining MS</a></li>
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="conseil.html">Conseil</a></li>
+    <li><a href="references.html">Références</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+  </ul>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header class="page-hero">
+  <div class="section-inner">
+    <p class="section-tag tag-or">Informations légales</p>
+    <h1>Mentions légales & Confidentialité</h1>
+    <p>Dernière mise à jour : mai 2025</p>
+  </div>
+</header>
+
+<main class="legal-content">
+
+  <nav class="nav-legal" aria-label="Navigation sur la page">
+    <a href="#mentions-legales">Mentions légales</a>
+    <a href="#confidentialite">Politique de confidentialité</a>
+    <a href="#cookies">Gestion des cookies</a>
+    <a href="#droits">Vos droits</a>
+  </nav>
+
+  <!-- ── MENTIONS LÉGALES ── -->
+  <section class="legal-block" id="mentions-legales">
+    <h2>Mentions légales</h2>
+
+    <h3>Éditeur du site</h3>
+    <ul>
+      <li>Nom : SOILEUX Maxence</li>
+      <li>Activité : Auto-entrepreneur – Formateur & Consultant en prévention des risques professionnels</li>
+      <li>Adresse : 2 rue Vandana Shiva, 93450 L'Île-Saint-Denis</li>
+      <li>Téléphone : <a href="tel:+33684527858">06.84.52.78.58</a></li>
+      <li>Email : <a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li>
+      <li>SIRET : 879 519 221 00022</li>
+      <li>Numéro de TVA intracommunautaire : FR50879519221</li>
+      <li>Responsable de publication : SOILEUX Maxence</li>
+    </ul>
+
+    <h3>Hébergeur du site</h3>
+    <ul>
+      <li>Société : GitHub, Inc.</li>
+      <li>Adresse : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</li>
+      <li>Site : <a href="https://github.com" target="_blank" rel="noopener">github.com</a></li>
+    </ul>
+
+    <h3>Propriété intellectuelle</h3>
+    <p>L'ensemble du contenu de ce site (textes, images, logo, visuels, structure) est la propriété exclusive de SOILEUX Maxence, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, même partielle, est strictement interdite sans autorisation préalable écrite.</p>
+
+    <h3>Responsabilité</h3>
+    <p>SOILEUX Maxence s'efforce d'assurer l'exactitude et la mise à jour des informations publiées sur ce site. Toutefois, il ne peut être tenu responsable des erreurs, omissions ou résultats qui pourraient être obtenus par un mauvais usage de ces informations.</p>
+  </section>
+
+  <!-- ── POLITIQUE DE CONFIDENTIALITÉ ── -->
+  <section class="legal-block" id="confidentialite">
+    <h2>Politique de confidentialité</h2>
+
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD – UE 2016/679) et à la loi Informatique et Libertés, vous êtes informé(e) de la manière dont vos données personnelles sont collectées et traitées sur ce site.</p>
+
+    <h3>Responsable du traitement</h3>
+    <p>SOILEUX Maxence – 2 rue Vandana Shiva, 93450 L'Île-Saint-Denis – <a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></p>
+
+    <h3>Données collectées et finalités</h3>
+    <table class="legal-table">
+      <thead>
+        <tr>
+          <th>Données collectées</th>
+          <th>Finalité</th>
+          <th>Base légale</th>
+          <th>Durée de conservation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nom, prénom, email, téléphone, organisation, message</td>
+          <td>Répondre aux demandes de contact et de devis</td>
+          <td>Intérêt légitime / Exécution d'un contrat</td>
+          <td>3 ans à compter du dernier contact</td>
+        </tr>
+        <tr>
+          <td>Données de navigation (via YouTube)</td>
+          <td>Lecture de la vidéo de démonstration FireTraining MS</td>
+          <td>Consentement</td>
+          <td>Gérée par Google/YouTube</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Destinataires des données</h3>
+    <p>Vos données sont transmises aux sous-traitants suivants dans le cadre du fonctionnement du site :</p>
+    <ul>
+      <li><strong>Formspree Inc.</strong> (traitement du formulaire de contact) – politique de confidentialité disponible sur <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io</a></li>
+      <li><strong>Google LLC / YouTube</strong> (intégration vidéo) – politique de confidentialité disponible sur <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com</a></li>
+    </ul>
+    <p>Vos données ne sont jamais vendues à des tiers.</p>
+
+    <h3>Transfert hors UE</h3>
+    <p>Formspree et GitHub sont des sociétés américaines. Ces transferts sont encadrés par les clauses contractuelles types de la Commission européenne, garantissant un niveau de protection adéquat de vos données.</p>
+  </section>
+
+  <!-- ── COOKIES ── -->
+  <section class="legal-block" id="cookies">
+    <h2>Gestion des cookies</h2>
+
+    <p>Un cookie est un petit fichier texte déposé sur votre navigateur lors de la visite d'un site web. Ce site n'utilise pas de cookies propriétaires de suivi ou de publicité.</p>
+
+    <h3>Cookies tiers déposés</h3>
+    <table class="legal-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Finalité</th>
+          <th>Cookies déposés</th>
+          <th>Consentement requis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>YouTube (google-nocookie.com)</td>
+          <td>Lecture de la vidéo FireTraining MS</td>
+          <td>Cookies de session, préférences lecture</td>
+          <td>Oui</td>
+        </tr>
+        <tr>
+          <td>Formspree</td>
+          <td>Traitement du formulaire de contact</td>
+          <td>Cookie de session anti-spam</td>
+          <td>Non (intérêt légitime)</td>
+        </tr>
+        <tr>
+          <td>Google Fonts</td>
+          <td>Chargement des polices d'écriture</td>
+          <td>Aucun cookie persistant</td>
+          <td>Non</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Comment gérer vos cookies</h3>
+    <p>Vous pouvez à tout moment configurer votre navigateur pour refuser ou supprimer les cookies :</p>
+    <ul>
+      <li>Chrome : Paramètres → Confidentialité → Cookies</li>
+      <li>Firefox : Paramètres → Vie privée → Cookies</li>
+      <li>Safari : Préférences → Confidentialité</li>
+      <li>Edge : Paramètres → Confidentialité → Cookies</li>
+    </ul>
+    <p>Le refus des cookies YouTube empêchera la lecture de la vidéo de démonstration sur ce site, mais n'affectera pas l'accès au reste du contenu.</p>
+  </section>
+
+  <!-- ── DROITS ── -->
+  <section class="legal-block" id="droits">
+    <h2>Vos droits</h2>
+
+    <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir une copie de vos données</li>
+      <li><strong>Droit de rectification</strong> — corriger des données inexactes</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+      <li><strong>Droit à la limitation</strong> — limiter le traitement de vos données</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer au traitement de vos données</li>
+      <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré</li>
+    </ul>
+
+    <h3>Exercer vos droits</h3>
+    <p>Pour exercer l'un de ces droits, contactez SOILEUX Maxence par email à <a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a> en précisant votre demande. Une réponse vous sera apportée dans un délai d'un mois.</p>
+
+    <h3>Réclamation auprès de la CNIL</h3>
+    <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> :<br />
+    <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a> — 3 Place de Fontenoy, 75007 Paris</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="make" />
+      <p>Formateur certifié & consultant IPRP en sécurité incendie, SST et management QSE à Paris et Île-de-France.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Prestations</h4>
+      <ul>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="conseil.html">Conseil & Audit</a></li>
+        <li><a href="firetraining-ms.html">FireTraining MS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="mentions-legales.html#confidentialite">Politique de confidentialité</a></li>
+        <li><a href="mentions-legales.html#cookies">Gestion des cookies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span>
+    <span>SIRET 879 519 221 00022 · TVA FR50879519221</span>
+  </div>
+</footer>
+
+
+<!-- BANDEAU COOKIE -->
+<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" style="
+  position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:var(--marine-fonce);
+  border-top:2px solid var(--bordeaux);
+  padding:1rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+  font-family:var(--font-corps);
+  box-shadow:0 -4px 24px rgba(0,0,0,0.3);
+">
+  <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin:0;max-width:700px;line-height:1.6">
+    Ce site utilise des cookies tiers (YouTube) pour la lecture de vidéos. En cliquant sur "Accepter", vous consentez à leur utilisation.
+    <a href="mentions-legales.html#cookies" style="color:rgba(255,255,255,0.5);text-decoration:underline;margin-left:0.4rem">En savoir plus</a>
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0">
+    <button onclick="cookieRefuse()" style="
+      background:transparent;border:1px solid rgba(255,255,255,0.3);
+      color:rgba(255,255,255,0.6);padding:0.5rem 1.25rem;
+      font-family:var(--font-corps);font-size:0.78rem;
+      border-radius:2px;cursor:pointer;letter-spacing:0.04em;
+    ">Refuser</button>
+    <button onclick="cookieAccept()" style="
+      background:var(--bordeaux);border:none;
+      color:var(--blanc);padding:0.5rem 1.25rem;
+      font-family:var(--font-corps);font-size:0.78rem;font-weight:500;
+      border-radius:2px;cursor:pointer;letter-spacing:0.04em;
+    ">Accepter</button>
+  </div>
+</div>
+<script>
+  (function(){
+    var banner = document.getElementById("cookie-banner");
+    var consent = localStorage.getItem("cookie-consent");
+    if(consent) { banner.style.display = "none"; }
+  })();
+  function cookieAccept(){
+    localStorage.setItem("cookie-consent","accepted");
+    document.getElementById("cookie-banner").style.display="none";
+  }
+  function cookieRefuse(){
+    localStorage.setItem("cookie-consent","refused");
+    document.getElementById("cookie-banner").style.display="none";
+  }
+</script>
+</body>
+</html>

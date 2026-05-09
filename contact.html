@@ -215,8 +215,54 @@
     <div class="footer-col"><h4>Prestations</h4><ul><li><a href="formations.html">Formations</a></li><li><a href="conseil.html">Conseil & Audit</a></li><li><a href="firetraining-ms.html">App FireTraining MS</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+33684527858">06.84.52.78.58</a></li><li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com</span><span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span></div>
+  <div class="footer-bottom"><span>© 2025 M. SOILEUX Maxence – make · formation-incendie-paris.com · <a href="mentions-legales.html" style="color:rgba(255,255,255,0.4)">Mentions légales</a></span><span>IPRP · SSIAP 3 · Master MQSE · Paris & Île-de-France</span></div>
 </footer>
 
+
+<!-- BANDEAU COOKIE -->
+<div id="cookie-banner" role="dialog" aria-label="Gestion des cookies" style="
+  position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:var(--marine-fonce);
+  border-top:2px solid var(--bordeaux);
+  padding:1rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+  font-family:var(--font-corps);
+  box-shadow:0 -4px 24px rgba(0,0,0,0.3);
+">
+  <p style="color:rgba(255,255,255,0.75);font-size:0.82rem;margin:0;max-width:700px;line-height:1.6">
+    Ce site utilise des cookies tiers (YouTube) pour la lecture de vidéos. En cliquant sur "Accepter", vous consentez à leur utilisation.
+    <a href="mentions-legales.html#cookies" style="color:rgba(255,255,255,0.5);text-decoration:underline;margin-left:0.4rem">En savoir plus</a>
+  </p>
+  <div style="display:flex;gap:0.75rem;flex-shrink:0">
+    <button onclick="cookieRefuse()" style="
+      background:transparent;border:1px solid rgba(255,255,255,0.3);
+      color:rgba(255,255,255,0.6);padding:0.5rem 1.25rem;
+      font-family:var(--font-corps);font-size:0.78rem;
+      border-radius:2px;cursor:pointer;letter-spacing:0.04em;
+    ">Refuser</button>
+    <button onclick="cookieAccept()" style="
+      background:var(--bordeaux);border:none;
+      color:var(--blanc);padding:0.5rem 1.25rem;
+      font-family:var(--font-corps);font-size:0.78rem;font-weight:500;
+      border-radius:2px;cursor:pointer;letter-spacing:0.04em;
+    ">Accepter</button>
+  </div>
+</div>
+<script>
+  (function(){
+    var banner = document.getElementById("cookie-banner");
+    var consent = localStorage.getItem("cookie-consent");
+    if(consent) { banner.style.display = "none"; }
+  })();
+  function cookieAccept(){
+    localStorage.setItem("cookie-consent","accepted");
+    document.getElementById("cookie-banner").style.display="none";
+  }
+  function cookieRefuse(){
+    localStorage.setItem("cookie-consent","refused");
+    document.getElementById("cookie-banner").style.display="none";
+  }
+</script>
 </body>
 </html>
