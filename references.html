@@ -173,6 +173,91 @@
   </div>
 </section>
 
+<!-- BANDEAU LOGOS CLIENTS -->
+<div id="logos-strip" aria-label="Ils nous font confiance">
+  <style>
+    #logos-strip {
+      background: var(--blanc);
+      padding: 3rem 0;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+    .logos-strip-label {
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gris-mid);
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+    .logos-track-wrap {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+    .logos-track-wrap::before,
+    .logos-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+    }
+    .logos-track-wrap::before { left: 0; background: linear-gradient(90deg, var(--blanc), transparent); }
+    .logos-track-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--blanc), transparent); }
+
+    .logos-track {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      width: max-content;
+      animation: scroll-logos 22s linear infinite;
+    }
+    .logos-track:hover { animation-play-state: paused; }
+
+    @keyframes scroll-logos {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .logo-item {
+      height: 52px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.55;
+      transition: filter 0.3s, opacity 0.3s;
+      flex-shrink: 0;
+    }
+    .logo-item:hover { filter: grayscale(0%); opacity: 1; }
+  </style>
+
+  <p class="logos-strip-label">Ils nous font confiance</p>
+  <div class="logos-track-wrap">
+    <div class="logos-track">
+      <!-- Série 1 -->
+      <img src="assets/clients/logo-cesi.png"      alt="CESI"      class="logo-item" />
+      <img src="assets/clients/logo-aprentiv.jpg"  alt="Aprentiv"  class="logo-item" />
+      <img src="assets/clients/logo-lide.jpg"      alt="Lide"      class="logo-item" />
+      <img src="assets/clients/logo-leo.png"       alt="Léo"       class="logo-item" />
+      <img src="assets/clients/logo-delville.png"  alt="Delville"  class="logo-item" />
+      <img src="assets/clients/logo-proform.png"   alt="Proform"   class="logo-item" />
+      <img src="assets/clients/logo-client4.png"   alt="Client"    class="logo-item" />
+      <!-- Série 2 (duplication pour boucle infinie fluide) -->
+      <img src="assets/clients/logo-cesi.png"      alt="CESI"      class="logo-item" />
+      <img src="assets/clients/logo-aprentiv.jpg"  alt="Aprentiv"  class="logo-item" />
+      <img src="assets/clients/logo-lide.jpg"      alt="Lide"      class="logo-item" />
+      <img src="assets/clients/logo-leo.png"       alt="Léo"       class="logo-item" />
+      <img src="assets/clients/logo-delville.png"  alt="Delville"  class="logo-item" />
+      <img src="assets/clients/logo-proform.png"   alt="Proform"   class="logo-item" />
+      <img src="assets/clients/logo-client4.png"   alt="Client"    class="logo-item" />
+    </div>
+  </div>
+</div>
+
 <div class="cta-strip">
   <div class="section-inner">
     <h2>Votre organisation peut être la suivante</h2>
