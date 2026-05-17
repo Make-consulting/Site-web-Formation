@@ -160,60 +160,63 @@
       <h2>Envoyer un message</h2>
       <p class="form-sub">Formation, devis, audit, démo FireTraining MS ou question réglementaire – je réponds à tout.</p>
 
-      <form action="https://formspree.io/f/xgodnjwz" method="POST">
-        <div class="form-row">
-          <div>
-            <label for="prenom">Prénom *</label>
-            <input type="text" id="prenom" name="prenom" required placeholder="Jean" />
+      <div id="contact-form-container">
+        <form id="contact-form">
+          <div class="form-row">
+            <div>
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" required placeholder="Jean" />
+            </div>
+            <div>
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" required placeholder="Dupont" />
+            </div>
           </div>
+
           <div>
-            <label for="nom">Nom *</label>
-            <input type="text" id="nom" name="nom" required placeholder="Dupont" />
+            <label for="organisation">Organisation</label>
+            <input type="text" id="organisation" name="organisation" placeholder="Entreprise / Mairie / OF..." />
           </div>
-        </div>
 
-        <div>
-          <label for="organisation">Organisation</label>
-          <input type="text" id="organisation" name="organisation" placeholder="Entreprise / Mairie / OF..." />
-        </div>
+          <div class="form-row">
+            <div>
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="jean@exemple.fr" />
+            </div>
+            <div>
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+            </div>
+          </div>
 
-        <div class="form-row">
           <div>
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="jean@exemple.fr" />
+            <label for="objet">Objet de la demande *</label>
+            <select id="objet" name="objet" required>
+              <option value="">– Choisir –</option>
+              <option>Formation incendie / EPI</option>
+              <option>Formation SST / Secourisme</option>
+              <option>Formation réglementaire</option>
+              <option>DUERP clé en main</option>
+              <option>Analyse RPS & Plan d'action</option>
+              <option>Audit sécurité / Conseil QSE</option>
+              <option>Normes ISO (45001 / 9001 / 14001)</option>
+              <option>PCA ou PCS</option>
+              <option>Démo App FireTraining MS (formation)</option>
+              <option>Licence App FireTraining MS (OF / formateur)</option>
+              <option>Autre</option>
+            </select>
           </div>
+
           <div>
-            <label for="telephone">Téléphone</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" />
+            <label for="message">Votre message *</label>
+            <textarea id="message" name="message" required placeholder="Décrivez votre besoin : effectifs, contexte, contraintes, délai souhaité..."></textarea>
           </div>
-        </div>
 
-        <div>
-          <label for="objet">Objet de la demande *</label>
-          <select id="objet" name="objet" required>
-            <option value="">– Choisir –</option>
-            <option>Formation incendie / EPI</option>
-            <option>Formation SST / Secourisme</option>
-            <option>Formation réglementaire</option>
-            <option>DUERP clé en main</option>
-            <option>Analyse RPS & Plan d'action</option>
-            <option>Audit sécurité / Conseil QSE</option>
-            <option>Normes ISO (45001 / 9001 / 14001)</option>
-            <option>PCA ou PCS</option>
-            <option>Démo App FireTraining MS (formation)</option>
-            <option>Licence App FireTraining MS (OF / formateur)</option>
-            <option>Autre</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="message">Votre message *</label>
-          <textarea id="message" name="message" required placeholder="Décrivez votre besoin : effectifs, contexte, contraintes, délai souhaité..."></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">Envoyer ma demande →</button>
-        <p class="form-note">* Champs obligatoires. Vos données sont utilisées uniquement pour répondre à votre demande.</p>
-      </form>
+          <button type="submit" class="form-submit" id="contact-submit">Envoyer ma demande →</button>
+          <p id="contact-error-msg" style="display:none;color:#c0392b;font-size:0.85rem;margin-top:0.5rem;">Une erreur est survenue, contactez-moi directement par email.</p>
+          <p class="form-note">* Champs obligatoires. Vos données sont utilisées uniquement pour répondre à votre demande.</p>
+        </form>
+      </div>
     </div>
   </div>
 </main>
@@ -272,6 +275,76 @@
     localStorage.setItem("cookie-consent","refused");
     document.getElementById("cookie-banner").style.display="none";
   }
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var url = 'https://script.google.com/macros/s/AKfycbzcmJ85wr7qaQU-75tYN67jIIUaPOS5py2aJTYCp5-KAxZ_UILnc8EBDagtlojyWV6X/exec';
+
+    var btn = document.getElementById('contact-submit');
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+    document.getElementById('contact-error-msg').style.display = 'none';
+
+    var fields = ['prenom', 'nom', 'organisation', 'email', 'telephone', 'objet', 'message'];
+    var params = 'action=recevoir_lead_site&token=MAKE-SITE-2026';
+    fields.forEach(function (name) {
+      var el = form.querySelector('[name="' + name + '"]');
+      params += '&' + encodeURIComponent(name) + '=' + encodeURIComponent(el ? el.value : '');
+    });
+
+    var cbName = 'jsonp_make_' + Date.now();
+    var script = document.createElement('script');
+    var timer;
+
+    window[cbName] = function () {
+      clearTimeout(timer);
+      cleanup();
+      showContactSuccess();
+    };
+
+    script.onerror = function () {
+      clearTimeout(timer);
+      cleanup();
+      btn.disabled = false;
+      btn.textContent = 'Envoyer ma demande →';
+      showContactError();
+    };
+
+    timer = setTimeout(function () {
+      cleanup();
+      btn.disabled = false;
+      btn.textContent = 'Envoyer ma demande →';
+      showContactError();
+    }, 12000);
+
+    function cleanup() {
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+    }
+
+    script.src = url + '?' + params + '&callback=' + cbName;
+    document.body.appendChild(script);
+  });
+
+  function showContactSuccess() {
+    var container = document.getElementById('contact-form-container');
+    container.innerHTML =
+      '<div style="padding:2.5rem 1rem;text-align:center;">' +
+        '<p style="font-size:1.15rem;font-weight:500;color:var(--bordeaux);">Message envoyé ✓ Je vous réponds sous 24h</p>' +
+      '</div>';
+  }
+
+  function showContactError() {
+    document.getElementById('contact-error-msg').style.display = 'block';
+  }
+})();
 </script>
 </body>
 </html>
