@@ -34,6 +34,7 @@ ICONS = {
  'calendar': '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
  'target': '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
  'download': '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/>',
+ 'radio': '<path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5M19.1 4.9C23 8.8 23 15.1 19.1 19"/><circle cx="12" cy="12" r="2"/>',
  'chart': '<path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>',
 }
 
@@ -77,12 +78,12 @@ def head(title, desc, canonical, extra=''):
 NAVS = {
  'formation': [('Formations', 'formations.html'), ('Incendie', 'formation-incendie.html'), ('SST', 'formation-sst.html'), ('Références', 'index.html#references'), ('FAQ', 'faq.html')],
  'firetraining': [('Apports', 'firetraining-ms.html#apports'), ('Formules', 'firetraining-ms.html#formules'), ('Organismes et formateurs', 'firetraining-pro.html'), ('FAQ', 'faq.html#faq-firetraining')],
- 'conseil': [('Missions', 'conseil.html#missions'), ('Méthode', 'conseil.html#methode'), ('IPRP', 'conseil.html#iprp'), ('FAQ', 'faq.html#faq-conseil')],
+ 'conseil': [('Missions', 'conseil.html#missions'), ('IPRP', 'conseil.html#iprp'), ('Formations', 'formations.html'), ('make-consulting.fr', 'https://make-consulting.fr/')],
 }
 CTAS = {
  'formation': ('Demander un devis', 'contact.html?univers=formation'),
  'firetraining': ('Demander une démo', 'contact.html?univers=firetraining&sujet=D%C3%A9mo%20FireTraining%20MS'),
- 'conseil': ('Diagnostic offert', 'contact.html?univers=conseil&sujet=Diagnostic%20initial%20offert%20(30%20min)'),
+ 'conseil': ('Diagnostic offert', 'https://make-consulting.fr/contact.html?sujet=Diagnostic%20initial%20offert%20(30%20min)'),
 }
 SUB = {'formation': 'Formation incendie · SST', 'firetraining': 'Réalité mixte · Formation incendie', 'conseil': 'Conseil QSE · IPRP'}
 
@@ -151,11 +152,12 @@ def footer():
         </ul>
       </div>
       <div>
-        <h4>Conseil</h4>
+        <h4>Conseil · MAKE Consulting</h4>
         <ul>
-          <li><a href="conseil.html#missions">DUERP clé en main</a></li>
-          <li><a href="conseil.html#missions">Prévention des RPS</a></li>
-          <li><a href="conseil.html#missions">Audit et normes ISO</a></li>
+          <li><a href="https://make-consulting.fr/duerp.html">DUERP clé en main</a></li>
+          <li><a href="https://make-consulting.fr/audit-qse.html">Audit QSE et ISO</a></li>
+          <li><a href="https://make-consulting.fr/diagnostic-ssiap.html">Diagnostic SSIAP</a></li>
+          <li><a href="https://make-consulting.fr/">make-consulting.fr</a></li>
           <li><a href="tel:+33684527858">06 84 52 78 58</a></li>
           <li><a href="mailto:msoileux.make@gmail.com">msoileux.make@gmail.com</a></li>
         </ul>

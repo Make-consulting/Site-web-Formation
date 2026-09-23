@@ -45,12 +45,9 @@ GROUPS = [
  ('faq-incendie', 'formation', 'flame', 'Formation incendie', FAQ_INC),
  ('faq-sst', 'formation', 'heart', 'SST et secourisme', FAQ_SST + [("Qui peut former des SST ?", "La formation SST doit être dispensée par un formateur certifié par l'INRS, au sein d'une structure habilitée. Je suis formateur SST agréé INRS.")]),
  ('faq-reglementaire', 'formation', 'clipboard', 'Formations réglementaires', FAQ_REG),
- ('faq-conseil', 'conseil', 'scale', 'Conseil et prévention', [
-   ("Qui doit réaliser un DUERP ?", "Tout employeur, dès le premier salarié (Code du travail, art. R.4121-1 à R.4121-4). Il doit être mis à jour au moins une fois par an dans les entreprises de 11 salariés et plus, et à chaque changement important : nouvel équipement, réorganisation, accident du travail."),
-   ("Intervenez-vous hors d'Île-de-France ?", "Oui, selon les conditions de la mission : durée, nombre de sessions et frais de déplacement. J'ai par exemple réalisé un audit ISO 9001 en Vendée et un plan de continuité d'activité dans les Alpes-Maritimes."),
-   ("Pourquoi faire appel à un IPRP ?", "L'IPRP est reconnu par le Code du travail (art. L.4644-1) pour accompagner les employeurs dans leur démarche de prévention. Votre démarche est valorisable auprès de votre CSE ou de votre CSSCT."),
-   ("Quand lancer une analyse des RPS ?", "Les risques psychosociaux doivent figurer dans le DUERP. Une analyse approfondie est recommandée en cas de réorganisation, de turn-over ou d'absentéisme élevé, de signalements de mal-être ou à la demande du CSE."),
-   ("Les collectivités ont-elles les mêmes obligations ?", "Oui : DUERP, formation incendie, SST. Les communes exposées à des risques majeurs identifiés doivent en plus disposer d'un plan communal de sauvegarde."),
+ ('faq-conseil', 'conseil', 'scale', 'Conseil et interventions', [
+   ("Intervenez-vous hors d'Île-de-France ?", "Oui, selon les conditions de la mission : durée, nombre de sessions et frais de déplacement."),
+   ("Proposez-vous aussi du conseil (DUERP, audit, RPS) ?", "Oui, avec mon cabinet MAKE Consulting. Les missions et leurs questions fréquentes sont détaillées sur <a href='https://make-consulting.fr/faq.html' target='_blank' rel='noopener'>make-consulting.fr</a>."),
  ]),
  ('faq-firetraining', 'firetraining', 'headset', 'FireTraining MS', [
    ("Qu'est-ce que FireTraining MS ?", "Une application de réalité mixte pour casques Meta Quest, que j'ai développée pour les formations incendie. Le stagiaire voit un départ de feu apparaître dans la salle et s'exerce à le traiter."),

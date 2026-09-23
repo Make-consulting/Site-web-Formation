@@ -102,7 +102,7 @@ def build_dept(key):
     <div class="grid-3" data-stagger>
       <a class="card cat-card" href="formation-incendie.html"><span class="ico-tile">{ico('flame')}</span><h3>Formation incendie</h3><p>Sensibilisation, équipier de première intervention, guide et serre-file. Une demi-journée par session.</p><span class="link-arrow">Voir les programmes {ico('arrow')}</span></a>
       <a class="card cat-card" href="formation-sst.html"><span class="ico-tile">{ico('heart')}</span><h3>SST et secourisme</h3><p>SST initial, recyclage, PSC et gestes qui sauvent, selon le référentiel INRS.</p><span class="link-arrow">Voir les programmes {ico('arrow')}</span></a>
-      <a class="card cat-card" href="conseil.html"><span class="ico-tile">{ico('clipboard')}</span><h3>Conseil et DUERP</h3><p>Document unique, prévention des RPS, audits, avec un IPRP déclaré.</p><span class="link-arrow">Voir les missions {ico('arrow')}</span></a>
+      <a class="card cat-card" href="https://make-consulting.fr/duerp.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('clipboard')}</span><h3>Conseil et DUERP</h3><p>Document unique, prévention des RPS, audits, avec mon cabinet MAKE Consulting.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a>
     </div>
   </div>
 </section>

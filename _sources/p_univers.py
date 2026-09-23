@@ -149,11 +149,11 @@ CO = f'''
   <div class="wrap hero-grid">
     <div class="hero-txt">
       <span class="eyebrow">Conseil en prévention · IPRP déclaré</span>
-      <h1 class="h-anim">Vos obligations santé-sécurité, <span class="accent">traduites en plan d&#39;action.</span></h1>
-      <p class="lead">DUERP, prévention des RPS, audits, normes ISO, PCA et PCS. Un accompagnement de terrain pour les entreprises et les collectivités, en Île-de-France et partout en France selon la mission.</p>
+      <h1 class="h-anim">Le conseil, avec <span class="accent">MAKE Consulting.</span></h1>
+      <p class="lead">Document unique, audits QSE et ISO, prévention des RPS, sécurité incendie : mes missions de conseil sont présentées sur le site de mon cabinet, make-consulting.fr.</p>
       <div class="hero-btns">
-        <a class="btn btn-primary" href="{DIAG}">Réserver le diagnostic offert {ico('arrow', extra=' ico-arrow')}</a>
-        <a class="btn btn-ghost" href="#missions">Voir les missions</a>
+        <a class="btn btn-primary" href="https://make-consulting.fr/" target="_blank" rel="noopener">Aller sur make-consulting.fr {ico('arrow', extra=' ico-arrow')}</a>
+        <a class="btn btn-ghost" href="https://make-consulting.fr/contact.html?sujet=Diagnostic%20initial%20offert%20(30%20min)" target="_blank" rel="noopener">Diagnostic offert (30 min)</a>
       </div>
       <div class="hero-proof">
         <span>{ico('scale')}IPRP, art. L.4644-1</span>
@@ -163,11 +163,9 @@ CO = f'''
     </div>
     <div class="hero-visual">
       <div class="diag-card">
-        <span class="eyebrow">Premier échange</span>
-        <div class="big">30 min</div>
-        <p style="color:var(--ink-2)">Un diagnostic initial offert pour faire le point sur votre situation réglementaire et identifier les priorités.</p>
-        {checks(['Vos obligations selon votre effectif et votre secteur', 'L&#39;état de votre document unique', 'Les actions à mener en premier'])}
-        <a class="btn btn-primary" href="{DIAG}">Choisir un créneau {ico('arrow', extra=' ico-arrow')}</a>
+        <span class="eyebrow">Formation et conseil</span>
+        <div class="big">Un seul interlocuteur</div>
+        <p style="color:var(--ink-2)">Le diagnostic identifie les risques, la formation prépare vos équipes. Les deux se complètent et se commandent auprès de la même personne.</p>
       </div>
     </div>
   </div>
@@ -175,74 +173,32 @@ CO = f'''
 
 <section class="section" id="missions">
   <div class="wrap">
-    <div class="legal-note reveal" id="iprp" style="margin-bottom:56px">{ico('scale')}<p><strong>IPRP : Intervenant en Prévention des Risques Professionnels.</strong> Statut reconnu par le Code du travail (art. L.4644-1). Mes interventions s&#39;inscrivent dans votre obligation légale d&#39;évaluation et de prévention des risques, et sont valorisables auprès de votre CSE ou CSSCT.</p></div>
-    <div class="sec-head reveal">
-      <span class="eyebrow">Missions</span>
-      <h2>Six missions, un point de départ commun : le diagnostic</h2>
-    </div>
+    <div class="legal-note reveal" id="iprp" style="margin-bottom:56px">{ico('scale')}<p><strong>IPRP : Intervenant en Prévention des Risques Professionnels.</strong> Statut reconnu par le Code du travail (art. L.4644-1). Mes interventions s&#39;inscrivent dans votre obligation légale d&#39;évaluation et de prévention des risques.</p></div>
+    <div class="sec-head reveal"><span class="eyebrow">Missions</span><h2>Les missions de conseil</h2><p class="lead">Chaque mission est détaillée sur make-consulting.fr : déroulé, livrables, références et tarifs.</p></div>
     <div class="grid-3" data-stagger>
-      {mission('clipboard', 'Obligation légale', 'DUERP clé en main', 'Votre document unique réalisé de A à Z, avec un plan d&#39;action priorisé et sa mise à jour annuelle.', ['Visite terrain et entretiens', 'Cotation des risques', 'Plan d&#39;action chiffré', 'Livré en 15 jours', 'Présentation au CSE incluse'], 'DUERP%20cl%C3%A9%20en%20main')}
-      {mission('activity', 'Risques psychosociaux', 'Prévention des RPS', 'Diagnostic des facteurs de risques psychosociaux, restitution et plan d&#39;action concret.', ['Questionnaire anonyme et entretiens', 'Analyse selon le modèle de Karasek', 'Restitution anonymisée', 'Suivi à 6 mois inclus'], 'Pr%C3%A9vention%20des%20RPS')}
-      {mission('search', 'Audit', 'Audit sécurité et incendie', 'Conformité de vos installations, procédures et documents obligatoires, avec préconisations classées.', ['Revue documentaire', 'Inspection terrain', 'Rapport et plan de mise en conformité'], 'Audit%20s%C3%A9curit%C3%A9%20%26%20incendie')}
-      {mission('award', 'Management QSE', 'Normes ISO 45001, 9001, 14001', 'Mise en place ou maintien de votre système de management, de l&#39;état des lieux à la certification.', ['Analyse des écarts', 'Documentation du système', 'Formation des équipes', 'Préparation à l&#39;audit'], 'Normes%20ISO%20(45001%20%2F%209001%20%2F%2014001)')}
-      {mission('refresh', 'Continuité', 'Plan de continuité d&#39;activité', 'Préparer votre organisation à un sinistre, une cyberattaque ou la défaillance d&#39;un fournisseur.', ['Analyse d&#39;impact (BIA)', 'Ressources critiques', 'Procédures de secours', 'Exercice de crise'], 'PCA%20ou%20PCS')}
-      {mission('landmark', 'Collectivités', 'Plan communal de sauvegarde', 'Rédaction ou révision de votre PCS selon la loi du 13 août 2004 et le décret du 13 septembre 2005.', ['Diagnostic des risques communaux', 'Cellule de crise', 'Fiches réflexes', 'Annuaire et exercice'], 'PCA%20ou%20PCS')}
+      <a class="card cat-card" href="https://make-consulting.fr/duerp.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('clipboard')}</span><h3>DUERP clé en main</h3><p>Document unique réalisé de A à Z, plan d&#39;action priorisé.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a><a class="card cat-card" href="https://make-consulting.fr/audit-qse.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('award')}</span><h3>Audit QSE et normes ISO</h3><p>Audit de conformité, audit interne, ISO 9001, 14001, 45001.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a><a class="card cat-card" href="https://make-consulting.fr/prevention-rps.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('activity')}</span><h3>Prévention des RPS</h3><p>Diagnostic, restitution anonymisée et plan d&#39;action.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a><a class="card cat-card" href="https://make-consulting.fr/securite-incendie.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('flame')}</span><h3>Sécurité incendie</h3><p>Audit de conformité et plans de défense incendie pour sites ICPE.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a><a class="card cat-card" href="https://make-consulting.fr/diagnostic-ssiap.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('radio')}</span><h3>Diagnostic des services SSIAP</h3><p>Évaluation en situation des agents de sécurité incendie.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a><a class="card cat-card" href="https://make-consulting.fr/continuite-activite.html" target="_blank" rel="noopener"><span class="ico-tile">{ico('refresh')}</span><h3>PCA et PCS</h3><p>Continuité d&#39;activité et plan communal de sauvegarde.</p><span class="link-arrow">Voir sur make-consulting.fr {ico('arrow')}</span></a>
     </div>
   </div>
 </section>
 
-<section class="section section--tint" id="methode">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Méthode</span>
-      <h2>Comment j&#39;interviens</h2>
-    </div>
-    <ol class="steps" data-stagger>
-      <li><h4>Diagnostic</h4><p>Votre situation réglementaire, votre secteur, vos obligations. Échange initial offert.</p></li>
-      <li><h4>Proposition</h4><p>Périmètre, livrables, délais et budget. Devis sous 48 h.</p></li>
-      <li><h4>Terrain</h4><p>Visites, entretiens, analyse documentaire. Je viens à vous.</p></li>
-      <li><h4>Livrables</h4><p>Documents finalisés et présentés à la direction, au CSE ou à la CSSCT.</p></li>
-      <li><h4>Suivi</h4><p>Accompagnement dans la mise en œuvre du plan d&#39;action.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="section">
+<section class="section section--tint">
   <div class="wrap split">
-    <figure class="quote reveal" style="margin:0"><blockquote>Le DUERP que Maxence a réalisé pour notre mairie est d&#39;une qualité remarquable. Complet, opérationnel, et présenté de façon limpide au conseil municipal.</blockquote><figcaption><strong>Directrice générale des services</strong>Commune de 12 000 habitants, Val-de-Marne</figcaption></figure>
     <div class="split-txt reveal">
-      <span class="eyebrow">Pour qui</span>
-      <h2>Entreprises, collectivités, établissements de santé</h2>
-      <p class="lead">Les mêmes obligations s&#39;appliquent au privé et au public : DUERP dès le premier salarié, prévention des RPS, sécurité incendie. Les communes exposées à des risques majeurs ajoutent le PCS.</p>
-      {checks(['PME et ETI, industrie et tertiaire', 'Mairies et établissements publics', 'EHPAD et établissements médico-sociaux', 'Chantiers et BTP, dont amiante SS4'])}
+      <span class="eyebrow">Après le diagnostic</span>
+      <h2>Former vos équipes</h2>
+      <p class="lead">Un document unique ou un audit débouche souvent sur un plan de formation : incendie, SST, risques chimiques, travail en hauteur, prévention des RPS.</p>
+      <a class="link-arrow" href="formations.html">Voir le catalogue des formations {ico('arrow')}</a>
     </div>
-  </div>
-</section>
-
-<section class="section section--tint" id="faq">
-  <div class="wrap">
-    <div class="sec-head sec-head--center reveal">
-      <span class="eyebrow">Questions fréquentes</span>
-      <h2>Ce qu&#39;on me demande le plus</h2>
-    </div>
-    <div class="faq reveal">
-      {faq_item("Qui doit réaliser un DUERP ?", "Tout employeur, dès le premier salarié (Code du travail, art. R.4121-1 à R.4121-4). Il doit être mis à jour au moins une fois par an dans les entreprises de 11 salariés et plus, et à chaque changement important : nouvel équipement, réorganisation, accident du travail.", True)}
-      {faq_item("Pourquoi faire appel à un IPRP ?", "L&#39;IPRP est reconnu par le Code du travail (art. L.4644-1) pour accompagner les employeurs dans leur démarche de prévention. Vous répondez à vos obligations avec l&#39;appui d&#39;un intervenant reconnu, et votre démarche est valorisable auprès de votre CSE.")}
-      {faq_item("Quand lancer une analyse des RPS ?", "Les risques psychosociaux doivent figurer dans le DUERP. Une analyse approfondie est recommandée en cas de réorganisation, de turn-over ou d&#39;absentéisme élevé, de signalements de mal-être ou à la demande du CSE.")}
-      {faq_item("Les collectivités ont-elles les mêmes obligations ?", "Oui : DUERP, formation incendie, SST. Les communes exposées à des risques majeurs identifiés doivent en plus disposer d&#39;un plan communal de sauvegarde.")}
-    </div>
+    <figure class="quote reveal" style="margin:0"><blockquote>Le DUERP que Maxence a réalisé pour notre mairie est d&#39;une qualité remarquable. Complet, opérationnel, et présenté de façon limpide au conseil municipal.</blockquote><figcaption><strong>Directrice générale des services</strong>Commune de 12 000 habitants, Val-de-Marne</figcaption></figure>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <div class="cta-band reveal">
-      <div>
-        <h2>Faisons le point en 30 minutes</h2>
-        <p>Un échange offert, sans engagement, pour savoir où vous en êtes et par quoi commencer.</p>
-      </div>
+      <div><h2>Faisons le point en 30 minutes</h2><p>Un échange offert, sans engagement, pour savoir où vous en êtes et par quoi commencer.</p></div>
       <div class="btns">
-        <a class="btn btn-light" href="{DIAG}">Réserver le diagnostic {ico('arrow', extra=' ico-arrow')}</a>
+        <a class="btn btn-light" href="https://make-consulting.fr/contact.html?sujet=Diagnostic%20initial%20offert%20(30%20min)" target="_blank" rel="noopener">Réserver le diagnostic {ico('arrow', extra=' ico-arrow')}</a>
         <a class="btn btn-outline-light" href="tel:+33684527858">{ico('phone')} 06 84 52 78 58</a>
       </div>
     </div>
@@ -256,6 +212,6 @@ def build_ft():
                 'firetraining-ms.html', 'firetraining', FT)
 
 def build_co():
-    return page('Conseil en prévention et QSE | IPRP en Île-de-France',
+    return page('Conseil en prévention et QSE avec MAKE Consulting | IPRP',
                 'DUERP clé en main, prévention des RPS, audit sécurité, normes ISO, PCA et PCS. Maxence Soileux, IPRP déclaré en Île-de-France. Diagnostic initial offert de 30 minutes.',
                 'conseil.html', 'conseil', CO)
