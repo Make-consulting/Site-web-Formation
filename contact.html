@@ -95,10 +95,11 @@
         <div class="field"><label for="email">E-mail *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
         <div class="field"><label for="telephone">Téléphone</label><input id="telephone" name="telephone" type="tel" autocomplete="tel"></div>
         <div class="field field--full"><label for="objet">Sujet *</label><select id="objet" name="objet" required><option value="">Choisir un sujet</option></select></div>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="site_web">Ne pas remplir</label><input id="site_web" name="site_web" tabindex="-1" autocomplete="off"></div>
         <div class="field field--full"><label for="message">Votre message *</label><textarea id="message" name="message" required placeholder="Effectifs, lieu, période souhaitée, contexte"></textarea></div>
         <div class="field--full" style="display:flex;flex-direction:column;gap:12px">
           <button class="btn btn-primary" type="submit" id="contact-submit" style="align-self:flex-start">Envoyer ma demande <svg class="ico ico-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          <p class="form-error" id="contact-error" hidden>L'envoi n'a pas abouti. Écrivez-moi directement à msoileux.make@gmail.com ou appelez le 06 84 52 78 58.</p>
+          <p class="form-error" id="contact-error" hidden>L'envoi n'a pas abouti. Écrivez-moi directement à maxence@make-consulting.fr ou appelez le 06 84 52 78 58.</p>
           <p class="form-note">* Champs obligatoires. Vos données servent uniquement à répondre à votre demande (voir les <a href="mentions-legales.html#confidentialite">mentions légales</a>).</p>
         </div>
       </form>
