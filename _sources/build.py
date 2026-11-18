@@ -4,7 +4,7 @@ out = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..') + os.sep
 pages = {'index.html': p_index.build(), 'firetraining-ms.html': p_univers.build_ft(), 'conseil.html': p_univers.build_co(),
          'contact.html': p_other.build_contact(), 'mentions-legales.html': p_other.build_mentions(),
          'formations.html': p_hub.build_catalogue(), 'formation-incendie.html': p_formations.build_incendie(),
-         'formation-sst.html': p_formations.build_sst(), 'formations-reglementaires.html': p_formations.build_reg(),
+         'formation-sst.html': p_formations.build_sst(), 'formations-reglementaires.html': p_formations.build_reg(), 'formation-qse.html': p_formations.build_qse(),
          'faq.html': p_hub.build_faq(), 'firetraining-pro.html': p_pro.build(), '404.html': p_other.build_404()}
 for k in p_local.DEPTS: pages[p_local.DEPTS[k]['slug']] = p_local.build_dept(k)
 import re

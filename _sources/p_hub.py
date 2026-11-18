@@ -1,7 +1,7 @@
 import json, re
 from partials import ico, page, head
 from p_index import faq_item
-from p_formations import INCENDIE, SST, REG, FAQ_INC, FAQ_SST, FAQ_REG
+from p_formations import INCENDIE, SST, REG, QSE, FAQ_INC, FAQ_SST, FAQ_REG
 
 def cat_card(href, icon, titre, texte, sessions, feature=False):
     rows = ''.join(f'<li><b>{s["court"]}</b><span>{s["tag"]}</span></li>' for s in sessions)
@@ -19,10 +19,11 @@ CAT = f'''
 <section class="section">
   <h2 class="sr-only">Domaines de formation</h2>
   <div class="wrap">
-    <div class="grid-3" data-stagger>
+    <div class="grid-2" data-stagger>
       {cat_card('formation-incendie.html', 'flame', 'Sécurité incendie', "Du réflexe de base à l'organisation de l'évacuation.", INCENDIE, True)}
       {cat_card('formation-sst.html', 'heart', 'SST et secourisme', "Selon le référentiel national de l'INRS.", SST)}
       {cat_card('formations-reglementaires.html', 'clipboard', 'Formations réglementaires', 'Construites à partir de vos risques réels.', REG)}
+      {cat_card('formation-qse.html', 'award', 'Formations QSE', 'Qualité, sécurité, environnement, audit interne, AMDEC.', QSE)}
     </div>
   </div>
 </section>

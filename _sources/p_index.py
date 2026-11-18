@@ -90,6 +90,7 @@ BODY = f'''
           {session('Risque amiante SS4', 'sur devis')}
         </ul>
         <a class="link-arrow" href="formations-reglementaires.html">Voir les programmes {ico('arrow')}</a>
+        <a class="link-arrow" href="formation-qse.html">Formations QSE : audit interne, AMDEC {ico('arrow')}</a>
       </article>
     </div>
   </div>
@@ -217,6 +218,6 @@ JSONLD = '''<script type="application/ld+json">{"@context":"https://schema.org",
 
 def build():
     from p_local import zones_section
-    return page('Formation incendie et SST à Paris | Maxence Soileux, SSIAP 3',
-                'Formations incendie, SST et réglementaires dans vos locaux à Paris et en Île-de-France. Formateur SSIAP 3, IPRP déclaré, attestations conformes. Devis sous 48 h.',
+    return page('Formations incendie, SST et QSE en entreprise | Paris, IDF',
+                'Formations incendie, SST, risques chimiques, RPS et amiante dans vos locaux en Île-de-France. Formateur Master QSE, SSIAP 3 et IPRP déclaré. Devis sous 48 h.',
                 '', 'formation', BODY.replace('%%ZONES%%', zones_section()), JSONLD)
