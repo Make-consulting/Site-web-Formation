@@ -212,3 +212,45 @@ def build_reg():
         "Décrivez vos postes et vos risques : je vous propose le programme adapté.",
         'Formations réglementaires en entreprise | Risques chimiques, hauteur, RPS',
         "Formations réglementaires sur mesure en Île-de-France : risques chimiques, travail en hauteur, prévention des RPS, risque amiante. Programmes construits à partir de votre DUERP.")
+
+# ─── QSE ────────────────────────────────────────────────
+QSE = [
+ dict(id='sensibilisation-qse', court='Sensibilisation QSE', tag='1 jour', titre='Les bases du management QSE',
+  intro="Une journée pour que vos managers et vos équipes comprennent ce que recouvre une démarche qualité, sécurité, environnement, et ce qu'elle change dans leur travail quotidien.",
+  duree='1 jour (7 h)', public='Managers, référents, salariés impliqués dans la démarche', effectif='12 personnes maximum', validation='Attestation de formation individuelle',
+  objectifs=["Comprendre les enjeux d'une démarche QSE", "Connaître les normes ISO 9001, ISO 14001 et ISO 45001 et leur logique commune", "Situer son rôle dans l'amélioration continue", "Utiliser les outils de base : indicateurs, analyse des causes, plan d'action"],
+  programme=[('Les trois volets', "Qualité, santé-sécurité au travail, environnement : ce que chacun apporte à l'entreprise."), ('Les normes de référence', "ISO 9001, ISO 14001, ISO 45001 : structure commune, exigences clés, certification."), ("L'amélioration continue", "Le cycle PDCA, les processus, les indicateurs."), ('Les outils', "Analyse des causes, traitement des non-conformités, plan d'action."), ('Cas pratique', "Application à une situation de votre entreprise.")]),
+ dict(id='audit-interne', court='Audit interne', tag='2 jours', titre='Auditeur interne QSE',
+  intro="Former vos collaborateurs à préparer, conduire et restituer un audit interne de votre système de management qualité, sécurité ou environnement.",
+  duree='2 jours (14 h)', public='Futurs auditeurs internes, responsables et animateurs QSE', effectif='10 personnes maximum', prerequis="Connaître le fonctionnement de l'entreprise", validation='Attestation de formation individuelle',
+  objectifs=["Connaître les principes de l'audit selon la norme ISO 19011", "Préparer un audit : périmètre, critères, plan et grille", "Conduire les entretiens et collecter des preuves", "Rédiger les constats et restituer l'audit"],
+  programme=[("Les principes de l'audit", "Rôle de l'audit interne, ISO 19011, posture de l'auditeur."), ('Préparer', "Programme d'audit, périmètre, critères, plan et grille d'audit."), ('Conduire', "Réunion d'ouverture, entretiens, observation, preuves d'audit."), ('Conclure', "Constats, non-conformités, points forts, réunion de clôture, rapport."), ('Mise en situation', "Audit d'un processus de votre entreprise, puis retour d'expérience.")],
+  note="L'audit interne prépare les audits de certification, qui sont réalisés par un organisme certificateur. Besoin d'un audit réalisé par un intervenant extérieur ? <a class=\"link-arrow\" href=\"conseil.html#missions\">Voir l'audit QSE en conseil</a>"),
+ dict(id='amdec', court='AMDEC', tag='1 jour', titre="AMDEC : analyser les modes de défaillance",
+  intro="Une méthode structurée pour repérer ce qui peut mal tourner sur un produit, un procédé ou un équipement, et traiter d'abord les risques les plus critiques.",
+  duree='1 jour (7 h)', public='Équipes qualité, méthodes, maintenance, production', effectif='10 personnes maximum', validation='Attestation de formation individuelle',
+  objectifs=["Comprendre la démarche AMDEC et ses usages", "Identifier modes de défaillance, causes et effets", "Coter gravité, occurrence et détection", "Hiérarchiser les risques et bâtir le plan d'action"],
+  programme=[("La démarche", "Principe de l'AMDEC produit, procédé et moyen."), ("L'analyse fonctionnelle", "Décomposer le système étudié."), ('Les défaillances', "Modes, causes, effets."), ('La cotation', "Gravité, occurrence, détection, criticité."), ('Atelier', "AMDEC menée en groupe sur un cas de votre entreprise.")]),
+ dict(id='referent-securite', court='Référent sécurité', tag='2 jours', titre='Référent santé-sécurité : évaluer les risques',
+  intro="Pour le salarié désigné par l'employeur pour s'occuper de la prévention des risques professionnels : évaluer les risques, tenir le document unique, suivre le plan d'action.",
+  duree='2 jours (14 h)', public='Salariés désignés compétents en prévention, dirigeants de TPE et PME', effectif='10 personnes maximum', validation='Attestation de formation individuelle',
+  objectifs=["Connaître les obligations de l'employeur et le rôle du référent", "Évaluer les risques d'une unité de travail", "Rédiger et mettre à jour le document unique (DUERP)", "Construire et suivre le plan de prévention"],
+  programme=[('Le cadre', "Principes généraux de prévention, acteurs de la prévention, rôle du salarié compétent."), ("L'évaluation des risques", "Unités de travail, dangers, cotation, mesures existantes."), ('Le document unique', "Contenu, mise à jour, conservation."), ("Le plan d'action", "Priorités, responsables, échéances, suivi."), ('Atelier', "Évaluation d'une unité de travail de votre entreprise.")],
+  note="En tant qu'IPRP, je peux aussi réaliser ou mettre à jour votre DUERP. <a class=\"link-arrow\" href=\"conseil.html#missions\">Voir la mission DUERP</a>"),
+]
+FAQ_QSE = [
+ ("Qu'est-ce qu'une formation QSE ?", "Une formation qualité, sécurité, environnement apprend à vos équipes à organiser et améliorer le travail selon les normes ISO 9001 (qualité), ISO 45001 (santé-sécurité au travail) et ISO 14001 (environnement) : maîtriser les processus, prévenir les risques, réduire les impacts et progresser en continu."),
+ ("Ces formations délivrent-elles un diplôme ?", "Non. Ce sont des formations professionnelles courtes pour les entreprises, réalisées dans vos locaux, avec une attestation individuelle. Elles ne remplacent pas un diplôme en management QSE."),
+ ("Préparez-vous à la certification ISO ?", "Je forme vos équipes et vos auditeurs internes, et je peux vous accompagner dans la démarche en conseil. La certification elle-même est délivrée par un organisme certificateur accrédité, à l'issue de son propre audit."),
+ ("Faut-il désigner un référent sécurité ?", "Oui. Le Code du travail (art. L.4644-1) impose à l'employeur de désigner un ou plusieurs salariés compétents pour s'occuper de la prévention des risques professionnels. À défaut de compétences en interne, il peut faire appel à un IPRP enregistré."),
+]
+
+def build_qse():
+    return theme_page('formation-qse.html', 'Formations QSE',
+        'Formations QSE en entreprise <span class="accent">à Paris et en Île-de-France</span>',
+        "Management qualité, sécurité, environnement, audit interne, AMDEC, évaluation des risques : des formations courtes dans vos locaux, par un formateur titulaire d'un Master QSE et IPRP déclaré.",
+        [('award', 'Master QSE'), ('scale', 'IPRP déclaré'), ('building', 'Intra-entreprise'), ('file', 'Attestations individuelles')],
+        QSE, 'Formation%20QSE', FAQ_QSE, 'Formons vos équipes à la démarche QSE',
+        "Dites-moi où en est votre démarche et combien de personnes former. Programme et devis sous 48 h.",
+        'Formation QSE en entreprise à Paris | Audit interne, AMDEC, ISO',
+        "Formations QSE dans vos locaux en Île-de-France : management qualité, sécurité, environnement, auditeur interne ISO 9001, 14001 et 45001, AMDEC, référent sécurité.")

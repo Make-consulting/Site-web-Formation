@@ -90,6 +90,7 @@ BODY = f'''
           {session('Risque amiante SS4', 'sur devis')}
         </ul>
         <a class="link-arrow" href="formations-reglementaires.html">Voir les programmes {ico('arrow')}</a>
+        <a class="link-arrow" href="formation-qse.html">Formations QSE : audit interne, AMDEC {ico('arrow')}</a>
       </article>
     </div>
   </div>

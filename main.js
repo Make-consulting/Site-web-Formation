@@ -230,7 +230,7 @@
   if (form) {
     var select = document.getElementById('objet');
     var sujets = {
-      formation: ['Formation incendie / EPI', 'Formation SST / Secourisme', 'Formation réglementaire', 'Programme sur mesure'],
+      formation: ['Formation incendie / EPI', 'Formation SST / Secourisme', 'Formation réglementaire', 'Formation QSE', 'Programme sur mesure'],
       firetraining: ['Démo FireTraining MS', 'Formation avec FireTraining MS (mes équipes)', 'Licence annuelle FireTraining MS (OF)', 'Achat FireTraining MS (formateur indépendant)'],
       conseil: ['Diagnostic initial offert (30 min)', 'DUERP clé en main', 'Prévention des RPS', 'Audit sécurité & incendie', 'Normes ISO (45001 / 9001 / 14001)', 'PCA ou PCS']
     };
